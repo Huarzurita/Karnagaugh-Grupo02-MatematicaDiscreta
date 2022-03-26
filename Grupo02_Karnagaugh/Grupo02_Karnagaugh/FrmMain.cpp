@@ -11,3 +11,4 @@ int main() {
 
 //hola xdxdxd osy huarzu me presento
 //fabianick sin nick
+//tabla de verdad
