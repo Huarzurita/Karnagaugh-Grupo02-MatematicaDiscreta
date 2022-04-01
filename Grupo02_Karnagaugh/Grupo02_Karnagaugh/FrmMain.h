@@ -1,5 +1,6 @@
 #pragma once
 #include"Operacion.h"
+#include"Operacion3.h"
 namespace Grupo02Karnagaugh {
 
 	using namespace System;
@@ -118,6 +119,10 @@ namespace Grupo02Karnagaugh {
 		if (comboBox1->Text == "2") {
 			Operacion^ op = gcnew Operacion();
 			op->Show();
+		}
+		if (comboBox1->Text == "3") {
+			Operacion3^ op3 = gcnew Operacion3();
+			op3->Show();
 		}
 	}
 	

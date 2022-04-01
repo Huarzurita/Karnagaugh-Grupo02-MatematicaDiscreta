@@ -58,7 +58,12 @@ namespace Grupo02Karnagaugh {
 	private: System::Windows::Forms::TextBox^ textBox16;
 	private: System::Windows::Forms::TextBox^ textBox15;
 	private: System::Windows::Forms::TextBox^ textBox14;
+	private: System::Windows::Forms::Button^ button1;
+	private: System::Windows::Forms::Label^ label7;
+	private: System::Windows::Forms::Label^ label6;
 	private: System::Windows::Forms::TextBox^ textBox13;
+	private: System::Windows::Forms::Button^ button2;
+
 
 	private:
 		/// <summary>
@@ -90,12 +95,16 @@ namespace Grupo02Karnagaugh {
 			this->textBox12 = (gcnew System::Windows::Forms::TextBox());
 			this->groupBox1 = (gcnew System::Windows::Forms::GroupBox());
 			this->groupBox2 = (gcnew System::Windows::Forms::GroupBox());
-			this->textBox13 = (gcnew System::Windows::Forms::TextBox());
-			this->textBox14 = (gcnew System::Windows::Forms::TextBox());
-			this->textBox15 = (gcnew System::Windows::Forms::TextBox());
-			this->textBox16 = (gcnew System::Windows::Forms::TextBox());
-			this->label1 = (gcnew System::Windows::Forms::Label());
+			this->button1 = (gcnew System::Windows::Forms::Button());
+			this->label7 = (gcnew System::Windows::Forms::Label());
+			this->label6 = (gcnew System::Windows::Forms::Label());
 			this->label5 = (gcnew System::Windows::Forms::Label());
+			this->label1 = (gcnew System::Windows::Forms::Label());
+			this->textBox16 = (gcnew System::Windows::Forms::TextBox());
+			this->textBox15 = (gcnew System::Windows::Forms::TextBox());
+			this->textBox14 = (gcnew System::Windows::Forms::TextBox());
+			this->textBox13 = (gcnew System::Windows::Forms::TextBox());
+			this->button2 = (gcnew System::Windows::Forms::Button());
 			this->groupBox1->SuspendLayout();
 			this->groupBox2->SuspendLayout();
 			this->SuspendLayout();
@@ -266,6 +275,9 @@ namespace Grupo02Karnagaugh {
 			// groupBox2
 			// 
 			this->groupBox2->BackColor = System::Drawing::SystemColors::ControlDark;
+			this->groupBox2->Controls->Add(this->button1);
+			this->groupBox2->Controls->Add(this->label7);
+			this->groupBox2->Controls->Add(this->label6);
 			this->groupBox2->Controls->Add(this->label5);
 			this->groupBox2->Controls->Add(this->label1);
 			this->groupBox2->Controls->Add(this->textBox16);
@@ -279,26 +291,59 @@ namespace Grupo02Karnagaugh {
 			this->groupBox2->TabStop = false;
 			this->groupBox2->Text = L"Mapa de Karnaugh ";
 			// 
-			// textBox13
+			// button1
 			// 
-			this->textBox13->Location = System::Drawing::Point(72, 59);
-			this->textBox13->Name = L"textBox13";
-			this->textBox13->Size = System::Drawing::Size(54, 20);
-			this->textBox13->TabIndex = 0;
+			this->button1->Location = System::Drawing::Point(236, 73);
+			this->button1->Name = L"button1";
+			this->button1->Size = System::Drawing::Size(75, 23);
+			this->button1->TabIndex = 8;
+			this->button1->Text = L"Calcular";
+			this->button1->UseVisualStyleBackColor = true;
+			this->button1->Click += gcnew System::EventHandler(this, &Operacion::button1_Click);
 			// 
-			// textBox14
+			// label7
 			// 
-			this->textBox14->Location = System::Drawing::Point(142, 59);
-			this->textBox14->Name = L"textBox14";
-			this->textBox14->Size = System::Drawing::Size(54, 20);
-			this->textBox14->TabIndex = 1;
+			this->label7->AutoSize = true;
+			this->label7->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 11.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->label7->Location = System::Drawing::Point(51, 87);
+			this->label7->Name = L"label7";
+			this->label7->Size = System::Drawing::Size(15, 18);
+			this->label7->TabIndex = 7;
+			this->label7->Text = L"x";
 			// 
-			// textBox15
+			// label6
 			// 
-			this->textBox15->Location = System::Drawing::Point(72, 85);
-			this->textBox15->Name = L"textBox15";
-			this->textBox15->Size = System::Drawing::Size(54, 20);
-			this->textBox15->TabIndex = 2;
+			this->label6->AutoSize = true;
+			this->label6->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 11.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->label6->Location = System::Drawing::Point(160, 38);
+			this->label6->Name = L"label6";
+			this->label6->Size = System::Drawing::Size(15, 18);
+			this->label6->TabIndex = 6;
+			this->label6->Text = L"y";
+			// 
+			// label5
+			// 
+			this->label5->AutoSize = true;
+			this->label5->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 11.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->label5->Location = System::Drawing::Point(86, 38);
+			this->label5->Name = L"label5";
+			this->label5->Size = System::Drawing::Size(18, 18);
+			this->label5->TabIndex = 5;
+			this->label5->Text = L"y\'";
+			// 
+			// label1
+			// 
+			this->label1->AutoSize = true;
+			this->label1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 11.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->label1->Location = System::Drawing::Point(51, 61);
+			this->label1->Name = L"label1";
+			this->label1->Size = System::Drawing::Size(18, 18);
+			this->label1->TabIndex = 4;
+			this->label1->Text = L"x\'";
 			// 
 			// textBox16
 			// 
@@ -307,27 +352,36 @@ namespace Grupo02Karnagaugh {
 			this->textBox16->Size = System::Drawing::Size(54, 20);
 			this->textBox16->TabIndex = 3;
 			// 
-			// label1
+			// textBox15
 			// 
-			this->label1->AutoSize = true;
-			this->label1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 11.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->label1->Location = System::Drawing::Point(52, 48);
-			this->label1->Name = L"label1";
-			this->label1->Size = System::Drawing::Size(15, 18);
-			this->label1->TabIndex = 4;
-			this->label1->Text = L"x";
+			this->textBox15->Location = System::Drawing::Point(72, 85);
+			this->textBox15->Name = L"textBox15";
+			this->textBox15->Size = System::Drawing::Size(54, 20);
+			this->textBox15->TabIndex = 2;
 			// 
-			// label5
+			// textBox14
 			// 
-			this->label5->AutoSize = true;
-			this->label5->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 11.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->label5->Location = System::Drawing::Point(69, 38);
-			this->label5->Name = L"label5";
-			this->label5->Size = System::Drawing::Size(23, 18);
-			this->label5->TabIndex = 5;
-			this->label5->Text = L"\\ y";
+			this->textBox14->Location = System::Drawing::Point(142, 59);
+			this->textBox14->Name = L"textBox14";
+			this->textBox14->Size = System::Drawing::Size(54, 20);
+			this->textBox14->TabIndex = 1;
+			// 
+			// textBox13
+			// 
+			this->textBox13->Location = System::Drawing::Point(72, 59);
+			this->textBox13->Name = L"textBox13";
+			this->textBox13->Size = System::Drawing::Size(54, 20);
+			this->textBox13->TabIndex = 0;
+			// 
+			// button2
+			// 
+			this->button2->Location = System::Drawing::Point(636, 624);
+			this->button2->Name = L"button2";
+			this->button2->Size = System::Drawing::Size(99, 35);
+			this->button2->TabIndex = 9;
+			this->button2->Text = L"Volver";
+			this->button2->UseVisualStyleBackColor = true;
+			this->button2->Click += gcnew System::EventHandler(this, &Operacion::button2_Click);
 			// 
 			// Operacion
 			// 
@@ -335,6 +389,7 @@ namespace Grupo02Karnagaugh {
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->BackColor = System::Drawing::SystemColors::Control;
 			this->ClientSize = System::Drawing::Size(747, 671);
+			this->Controls->Add(this->button2);
 			this->Controls->Add(this->groupBox2);
 			this->Controls->Add(this->groupBox1);
 			this->Name = L"Operacion";
@@ -347,5 +402,14 @@ namespace Grupo02Karnagaugh {
 
 		}
 #pragma endregion
-	};
+	private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
+		this->textBox13->Text = this->textBox12->Text;
+		this->textBox14->Text = this->textBox11->Text;
+		this->textBox15->Text = this->textBox10->Text;
+		this->textBox16->Text = this->textBox9->Text;
+	}
+private: System::Void button2_Click(System::Object^ sender, System::EventArgs^ e) {
+	this->Close();
+}
+};
 }

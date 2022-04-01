@@ -2,3 +2,4 @@ C:\Users\User\Desktop\Karnagaugh-Grupo02-MatematicaDiscreta\Grupo02_Karnagaugh\G
 C:\Users\User\Desktop\Karnagaugh-Grupo02-MatematicaDiscreta\Grupo02_Karnagaugh\Grupo02_Karnagaugh\Debug\Grupo02Karnagaugh.FrmMain.resources
 C:\Users\User\Desktop\Karnagaugh-Grupo02-MatematicaDiscreta\Grupo02_Karnagaugh\Grupo02_Karnagaugh\Debug\Grupo02Karnagaugh.Operacion.resources
 C:\Users\User\Desktop\Karnagaugh-Grupo02-MatematicaDiscreta\Grupo02_Karnagaugh\Grupo02_Karnagaugh\Debug\Grupo02_Karnagaugh.vcxproj.GenerateResource.cache
+C:\Users\User\Desktop\Karnagaugh-Grupo02-MatematicaDiscreta\Grupo02_Karnagaugh\Grupo02_Karnagaugh\Debug\Grupo02Karnagaugh.Operacion3.resources
