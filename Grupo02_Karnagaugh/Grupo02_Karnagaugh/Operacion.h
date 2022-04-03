@@ -47,10 +47,10 @@ namespace Grupo02Karnagaugh {
 	private: System::Windows::Forms::TextBox^ textBox6;
 	private: System::Windows::Forms::TextBox^ textBox7;
 	private: System::Windows::Forms::TextBox^ textBox8;
-	private: System::Windows::Forms::TextBox^ textBox9;
-	private: System::Windows::Forms::TextBox^ textBox10;
-	private: System::Windows::Forms::TextBox^ textBox11;
-	private: System::Windows::Forms::TextBox^ textBox12;
+
+
+
+
 	private: System::Windows::Forms::GroupBox^ groupBox1;
 	private: System::Windows::Forms::GroupBox^ groupBox2;
 	private: System::Windows::Forms::Label^ label5;
@@ -63,6 +63,22 @@ namespace Grupo02Karnagaugh {
 	private: System::Windows::Forms::Label^ label6;
 	private: System::Windows::Forms::TextBox^ textBox13;
 	private: System::Windows::Forms::Button^ button2;
+	private: System::Windows::Forms::ComboBox^ comboBox4;
+	private: System::Windows::Forms::ComboBox^ comboBox3;
+	private: System::Windows::Forms::ComboBox^ comboBox2;
+	private: System::Windows::Forms::ComboBox^ comboBox1;
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 	private:
@@ -89,11 +105,8 @@ namespace Grupo02Karnagaugh {
 			this->textBox6 = (gcnew System::Windows::Forms::TextBox());
 			this->textBox7 = (gcnew System::Windows::Forms::TextBox());
 			this->textBox8 = (gcnew System::Windows::Forms::TextBox());
-			this->textBox9 = (gcnew System::Windows::Forms::TextBox());
-			this->textBox10 = (gcnew System::Windows::Forms::TextBox());
-			this->textBox11 = (gcnew System::Windows::Forms::TextBox());
-			this->textBox12 = (gcnew System::Windows::Forms::TextBox());
 			this->groupBox1 = (gcnew System::Windows::Forms::GroupBox());
+			this->comboBox1 = (gcnew System::Windows::Forms::ComboBox());
 			this->groupBox2 = (gcnew System::Windows::Forms::GroupBox());
 			this->button1 = (gcnew System::Windows::Forms::Button());
 			this->label7 = (gcnew System::Windows::Forms::Label());
@@ -105,6 +118,9 @@ namespace Grupo02Karnagaugh {
 			this->textBox14 = (gcnew System::Windows::Forms::TextBox());
 			this->textBox13 = (gcnew System::Windows::Forms::TextBox());
 			this->button2 = (gcnew System::Windows::Forms::Button());
+			this->comboBox2 = (gcnew System::Windows::Forms::ComboBox());
+			this->comboBox3 = (gcnew System::Windows::Forms::ComboBox());
+			this->comboBox4 = (gcnew System::Windows::Forms::ComboBox());
 			this->groupBox1->SuspendLayout();
 			this->groupBox2->SuspendLayout();
 			this->SuspendLayout();
@@ -136,7 +152,7 @@ namespace Grupo02Karnagaugh {
 			this->label4->AutoSize = true;
 			this->label4->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label4->Location = System::Drawing::Point(124, 26);
+			this->label4->Location = System::Drawing::Point(137, 26);
 			this->label4->Name = L"label4";
 			this->label4->Size = System::Drawing::Size(14, 20);
 			this->label4->TabIndex = 3;
@@ -214,46 +230,14 @@ namespace Grupo02Karnagaugh {
 			this->textBox8->TabIndex = 8;
 			this->textBox8->Text = L"0";
 			// 
-			// textBox9
-			// 
-			this->textBox9->Location = System::Drawing::Point(119, 137);
-			this->textBox9->Name = L"textBox9";
-			this->textBox9->Size = System::Drawing::Size(36, 20);
-			this->textBox9->TabIndex = 15;
-			this->textBox9->Text = L"1";
-			// 
-			// textBox10
-			// 
-			this->textBox10->Location = System::Drawing::Point(119, 111);
-			this->textBox10->Name = L"textBox10";
-			this->textBox10->Size = System::Drawing::Size(36, 20);
-			this->textBox10->TabIndex = 14;
-			this->textBox10->Text = L"0";
-			// 
-			// textBox11
-			// 
-			this->textBox11->Location = System::Drawing::Point(119, 85);
-			this->textBox11->Name = L"textBox11";
-			this->textBox11->Size = System::Drawing::Size(36, 20);
-			this->textBox11->TabIndex = 13;
-			this->textBox11->Text = L"1";
-			// 
-			// textBox12
-			// 
-			this->textBox12->Location = System::Drawing::Point(119, 59);
-			this->textBox12->Name = L"textBox12";
-			this->textBox12->Size = System::Drawing::Size(36, 20);
-			this->textBox12->TabIndex = 12;
-			this->textBox12->Text = L"1";
-			// 
 			// groupBox1
 			// 
 			this->groupBox1->AccessibleRole = System::Windows::Forms::AccessibleRole::None;
 			this->groupBox1->BackColor = System::Drawing::SystemColors::ActiveCaption;
-			this->groupBox1->Controls->Add(this->textBox9);
-			this->groupBox1->Controls->Add(this->textBox10);
-			this->groupBox1->Controls->Add(this->textBox11);
-			this->groupBox1->Controls->Add(this->textBox12);
+			this->groupBox1->Controls->Add(this->comboBox4);
+			this->groupBox1->Controls->Add(this->comboBox3);
+			this->groupBox1->Controls->Add(this->comboBox2);
+			this->groupBox1->Controls->Add(this->comboBox1);
 			this->groupBox1->Controls->Add(this->textBox5);
 			this->groupBox1->Controls->Add(this->textBox6);
 			this->groupBox1->Controls->Add(this->textBox7);
@@ -271,6 +255,16 @@ namespace Grupo02Karnagaugh {
 			this->groupBox1->TabIndex = 16;
 			this->groupBox1->TabStop = false;
 			this->groupBox1->Text = L"Tabla de verdad";
+			// 
+			// comboBox1
+			// 
+			this->comboBox1->DropDownStyle = System::Windows::Forms::ComboBoxStyle::DropDownList;
+			this->comboBox1->FormattingEnabled = true;
+			this->comboBox1->Items->AddRange(gcnew cli::array< System::Object^  >(2) { L"0", L"1" });
+			this->comboBox1->Location = System::Drawing::Point(130, 58);
+			this->comboBox1->Name = L"comboBox1";
+			this->comboBox1->Size = System::Drawing::Size(31, 21);
+			this->comboBox1->TabIndex = 12;
 			// 
 			// groupBox2
 			// 
@@ -347,6 +341,7 @@ namespace Grupo02Karnagaugh {
 			// 
 			// textBox16
 			// 
+			this->textBox16->Enabled = false;
 			this->textBox16->Location = System::Drawing::Point(142, 85);
 			this->textBox16->Name = L"textBox16";
 			this->textBox16->Size = System::Drawing::Size(54, 20);
@@ -354,6 +349,7 @@ namespace Grupo02Karnagaugh {
 			// 
 			// textBox15
 			// 
+			this->textBox15->Enabled = false;
 			this->textBox15->Location = System::Drawing::Point(72, 85);
 			this->textBox15->Name = L"textBox15";
 			this->textBox15->Size = System::Drawing::Size(54, 20);
@@ -361,6 +357,7 @@ namespace Grupo02Karnagaugh {
 			// 
 			// textBox14
 			// 
+			this->textBox14->Enabled = false;
 			this->textBox14->Location = System::Drawing::Point(142, 59);
 			this->textBox14->Name = L"textBox14";
 			this->textBox14->Size = System::Drawing::Size(54, 20);
@@ -368,6 +365,7 @@ namespace Grupo02Karnagaugh {
 			// 
 			// textBox13
 			// 
+			this->textBox13->Enabled = false;
 			this->textBox13->Location = System::Drawing::Point(72, 59);
 			this->textBox13->Name = L"textBox13";
 			this->textBox13->Size = System::Drawing::Size(54, 20);
@@ -382,6 +380,36 @@ namespace Grupo02Karnagaugh {
 			this->button2->Text = L"Volver";
 			this->button2->UseVisualStyleBackColor = true;
 			this->button2->Click += gcnew System::EventHandler(this, &Operacion::button2_Click);
+			// 
+			// comboBox2
+			// 
+			this->comboBox2->DropDownStyle = System::Windows::Forms::ComboBoxStyle::DropDownList;
+			this->comboBox2->FormattingEnabled = true;
+			this->comboBox2->Items->AddRange(gcnew cli::array< System::Object^  >(2) { L"0", L"1" });
+			this->comboBox2->Location = System::Drawing::Point(130, 84);
+			this->comboBox2->Name = L"comboBox2";
+			this->comboBox2->Size = System::Drawing::Size(31, 21);
+			this->comboBox2->TabIndex = 13;
+			// 
+			// comboBox3
+			// 
+			this->comboBox3->DropDownStyle = System::Windows::Forms::ComboBoxStyle::DropDownList;
+			this->comboBox3->FormattingEnabled = true;
+			this->comboBox3->Items->AddRange(gcnew cli::array< System::Object^  >(2) { L"0", L"1" });
+			this->comboBox3->Location = System::Drawing::Point(130, 110);
+			this->comboBox3->Name = L"comboBox3";
+			this->comboBox3->Size = System::Drawing::Size(31, 21);
+			this->comboBox3->TabIndex = 14;
+			// 
+			// comboBox4
+			// 
+			this->comboBox4->DropDownStyle = System::Windows::Forms::ComboBoxStyle::DropDownList;
+			this->comboBox4->FormattingEnabled = true;
+			this->comboBox4->Items->AddRange(gcnew cli::array< System::Object^  >(2) { L"0", L"1" });
+			this->comboBox4->Location = System::Drawing::Point(130, 136);
+			this->comboBox4->Name = L"comboBox4";
+			this->comboBox4->Size = System::Drawing::Size(31, 21);
+			this->comboBox4->TabIndex = 15;
 			// 
 			// Operacion
 			// 
@@ -403,13 +431,17 @@ namespace Grupo02Karnagaugh {
 		}
 #pragma endregion
 	private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
-		this->textBox13->Text = this->textBox12->Text;
-		this->textBox14->Text = this->textBox11->Text;
-		this->textBox15->Text = this->textBox10->Text;
-		this->textBox16->Text = this->textBox9->Text;
+		this->textBox13->Text = this->comboBox1->Text;
+		this->textBox14->Text = this->comboBox2->Text;
+		this->textBox15->Text = this->comboBox3->Text;
+		this->textBox16->Text = this->comboBox4->Text;
+
+		
 	}
 private: System::Void button2_Click(System::Object^ sender, System::EventArgs^ e) {
 	this->Close();
+}
+private: System::Void textBox12_TextChanged(System::Object^ sender, System::EventArgs^ e) {
 }
 };
 }

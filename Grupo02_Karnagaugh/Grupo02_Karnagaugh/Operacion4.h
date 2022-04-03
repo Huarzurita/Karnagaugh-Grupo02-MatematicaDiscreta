@@ -56,10 +56,10 @@ namespace Grupo02Karnagaugh {
 	private: System::Windows::Forms::TextBox^ textBox35;
 	private: System::Windows::Forms::TextBox^ textBox36;
 	private: System::Windows::Forms::GroupBox^ groupBox1;
-	private: System::Windows::Forms::TextBox^ textBox17;
-	private: System::Windows::Forms::TextBox^ textBox18;
-	private: System::Windows::Forms::TextBox^ textBox19;
-	private: System::Windows::Forms::TextBox^ textBox20;
+
+
+
+
 	private: System::Windows::Forms::TextBox^ textBox21;
 	private: System::Windows::Forms::TextBox^ textBox22;
 	private: System::Windows::Forms::TextBox^ textBox23;
@@ -72,10 +72,10 @@ namespace Grupo02Karnagaugh {
 	private: System::Windows::Forms::TextBox^ textBox30;
 	private: System::Windows::Forms::TextBox^ textBox31;
 	private: System::Windows::Forms::TextBox^ textBox32;
-	private: System::Windows::Forms::TextBox^ textBox13;
-	private: System::Windows::Forms::TextBox^ textBox14;
-	private: System::Windows::Forms::TextBox^ textBox15;
-	private: System::Windows::Forms::TextBox^ textBox16;
+
+
+
+
 	private: System::Windows::Forms::Label^ label5;
 	private: System::Windows::Forms::Label^ label1;
 	private: System::Windows::Forms::TextBox^ textBox9;
@@ -110,10 +110,10 @@ namespace Grupo02Karnagaugh {
 	private: System::Windows::Forms::TextBox^ textBox54;
 	private: System::Windows::Forms::TextBox^ textBox55;
 	private: System::Windows::Forms::TextBox^ textBox56;
-	private: System::Windows::Forms::TextBox^ textBox57;
-	private: System::Windows::Forms::TextBox^ textBox58;
-	private: System::Windows::Forms::TextBox^ textBox59;
-	private: System::Windows::Forms::TextBox^ textBox60;
+
+
+
+
 	private: System::Windows::Forms::TextBox^ textBox61;
 	private: System::Windows::Forms::TextBox^ textBox62;
 	private: System::Windows::Forms::TextBox^ textBox63;
@@ -126,10 +126,10 @@ namespace Grupo02Karnagaugh {
 	private: System::Windows::Forms::TextBox^ textBox70;
 	private: System::Windows::Forms::TextBox^ textBox71;
 	private: System::Windows::Forms::TextBox^ textBox72;
-	private: System::Windows::Forms::TextBox^ textBox73;
-	private: System::Windows::Forms::TextBox^ textBox74;
-	private: System::Windows::Forms::TextBox^ textBox75;
-	private: System::Windows::Forms::TextBox^ textBox76;
+
+
+
+
 	private: System::Windows::Forms::TextBox^ textBox77;
 	private: System::Windows::Forms::TextBox^ textBox78;
 	private: System::Windows::Forms::TextBox^ textBox79;
@@ -157,6 +157,22 @@ private: System::Windows::Forms::TextBox^ textBox94;
 private: System::Windows::Forms::TextBox^ textBox95;
 private: System::Windows::Forms::TextBox^ textBox96;
 private: System::Windows::Forms::Button^ button2;
+private: System::Windows::Forms::ComboBox^ comboBox16;
+private: System::Windows::Forms::ComboBox^ comboBox15;
+private: System::Windows::Forms::ComboBox^ comboBox14;
+private: System::Windows::Forms::ComboBox^ comboBox13;
+private: System::Windows::Forms::ComboBox^ comboBox12;
+private: System::Windows::Forms::ComboBox^ comboBox11;
+private: System::Windows::Forms::ComboBox^ comboBox10;
+private: System::Windows::Forms::ComboBox^ comboBox9;
+private: System::Windows::Forms::ComboBox^ comboBox8;
+private: System::Windows::Forms::ComboBox^ comboBox7;
+private: System::Windows::Forms::ComboBox^ comboBox6;
+private: System::Windows::Forms::ComboBox^ comboBox5;
+private: System::Windows::Forms::ComboBox^ comboBox4;
+private: System::Windows::Forms::ComboBox^ comboBox3;
+private: System::Windows::Forms::ComboBox^ comboBox2;
+private: System::Windows::Forms::ComboBox^ comboBox1;
 
 	private:
 		/// <summary>
@@ -206,6 +222,22 @@ private: System::Windows::Forms::Button^ button2;
 			this->textBox35 = (gcnew System::Windows::Forms::TextBox());
 			this->textBox36 = (gcnew System::Windows::Forms::TextBox());
 			this->groupBox1 = (gcnew System::Windows::Forms::GroupBox());
+			this->comboBox16 = (gcnew System::Windows::Forms::ComboBox());
+			this->comboBox15 = (gcnew System::Windows::Forms::ComboBox());
+			this->comboBox14 = (gcnew System::Windows::Forms::ComboBox());
+			this->comboBox13 = (gcnew System::Windows::Forms::ComboBox());
+			this->comboBox12 = (gcnew System::Windows::Forms::ComboBox());
+			this->comboBox11 = (gcnew System::Windows::Forms::ComboBox());
+			this->comboBox10 = (gcnew System::Windows::Forms::ComboBox());
+			this->comboBox9 = (gcnew System::Windows::Forms::ComboBox());
+			this->comboBox8 = (gcnew System::Windows::Forms::ComboBox());
+			this->comboBox7 = (gcnew System::Windows::Forms::ComboBox());
+			this->comboBox6 = (gcnew System::Windows::Forms::ComboBox());
+			this->comboBox5 = (gcnew System::Windows::Forms::ComboBox());
+			this->comboBox4 = (gcnew System::Windows::Forms::ComboBox());
+			this->comboBox3 = (gcnew System::Windows::Forms::ComboBox());
+			this->comboBox2 = (gcnew System::Windows::Forms::ComboBox());
+			this->comboBox1 = (gcnew System::Windows::Forms::ComboBox());
 			this->textBox49 = (gcnew System::Windows::Forms::TextBox());
 			this->textBox50 = (gcnew System::Windows::Forms::TextBox());
 			this->textBox51 = (gcnew System::Windows::Forms::TextBox());
@@ -214,10 +246,6 @@ private: System::Windows::Forms::Button^ button2;
 			this->textBox54 = (gcnew System::Windows::Forms::TextBox());
 			this->textBox55 = (gcnew System::Windows::Forms::TextBox());
 			this->textBox56 = (gcnew System::Windows::Forms::TextBox());
-			this->textBox57 = (gcnew System::Windows::Forms::TextBox());
-			this->textBox58 = (gcnew System::Windows::Forms::TextBox());
-			this->textBox59 = (gcnew System::Windows::Forms::TextBox());
-			this->textBox60 = (gcnew System::Windows::Forms::TextBox());
 			this->textBox61 = (gcnew System::Windows::Forms::TextBox());
 			this->textBox62 = (gcnew System::Windows::Forms::TextBox());
 			this->textBox63 = (gcnew System::Windows::Forms::TextBox());
@@ -230,10 +258,6 @@ private: System::Windows::Forms::Button^ button2;
 			this->textBox70 = (gcnew System::Windows::Forms::TextBox());
 			this->textBox71 = (gcnew System::Windows::Forms::TextBox());
 			this->textBox72 = (gcnew System::Windows::Forms::TextBox());
-			this->textBox73 = (gcnew System::Windows::Forms::TextBox());
-			this->textBox74 = (gcnew System::Windows::Forms::TextBox());
-			this->textBox75 = (gcnew System::Windows::Forms::TextBox());
-			this->textBox76 = (gcnew System::Windows::Forms::TextBox());
 			this->textBox77 = (gcnew System::Windows::Forms::TextBox());
 			this->textBox78 = (gcnew System::Windows::Forms::TextBox());
 			this->textBox79 = (gcnew System::Windows::Forms::TextBox());
@@ -255,10 +279,6 @@ private: System::Windows::Forms::Button^ button2;
 			this->textBox46 = (gcnew System::Windows::Forms::TextBox());
 			this->textBox47 = (gcnew System::Windows::Forms::TextBox());
 			this->textBox48 = (gcnew System::Windows::Forms::TextBox());
-			this->textBox17 = (gcnew System::Windows::Forms::TextBox());
-			this->textBox18 = (gcnew System::Windows::Forms::TextBox());
-			this->textBox19 = (gcnew System::Windows::Forms::TextBox());
-			this->textBox20 = (gcnew System::Windows::Forms::TextBox());
 			this->textBox21 = (gcnew System::Windows::Forms::TextBox());
 			this->textBox22 = (gcnew System::Windows::Forms::TextBox());
 			this->textBox23 = (gcnew System::Windows::Forms::TextBox());
@@ -271,10 +291,6 @@ private: System::Windows::Forms::Button^ button2;
 			this->textBox30 = (gcnew System::Windows::Forms::TextBox());
 			this->textBox31 = (gcnew System::Windows::Forms::TextBox());
 			this->textBox32 = (gcnew System::Windows::Forms::TextBox());
-			this->textBox13 = (gcnew System::Windows::Forms::TextBox());
-			this->textBox14 = (gcnew System::Windows::Forms::TextBox());
-			this->textBox15 = (gcnew System::Windows::Forms::TextBox());
-			this->textBox16 = (gcnew System::Windows::Forms::TextBox());
 			this->label5 = (gcnew System::Windows::Forms::Label());
 			this->label1 = (gcnew System::Windows::Forms::Label());
 			this->textBox9 = (gcnew System::Windows::Forms::TextBox());
@@ -409,6 +425,7 @@ private: System::Windows::Forms::Button^ button2;
 			// 
 			// textBox89
 			// 
+			this->textBox89->Enabled = false;
 			this->textBox89->Location = System::Drawing::Point(175, 144);
 			this->textBox89->Name = L"textBox89";
 			this->textBox89->Size = System::Drawing::Size(41, 20);
@@ -416,6 +433,7 @@ private: System::Windows::Forms::Button^ button2;
 			// 
 			// textBox90
 			// 
+			this->textBox90->Enabled = false;
 			this->textBox90->Location = System::Drawing::Point(128, 144);
 			this->textBox90->Name = L"textBox90";
 			this->textBox90->Size = System::Drawing::Size(41, 20);
@@ -423,6 +441,7 @@ private: System::Windows::Forms::Button^ button2;
 			// 
 			// textBox91
 			// 
+			this->textBox91->Enabled = false;
 			this->textBox91->Location = System::Drawing::Point(175, 118);
 			this->textBox91->Name = L"textBox91";
 			this->textBox91->Size = System::Drawing::Size(41, 20);
@@ -430,6 +449,7 @@ private: System::Windows::Forms::Button^ button2;
 			// 
 			// textBox92
 			// 
+			this->textBox92->Enabled = false;
 			this->textBox92->Location = System::Drawing::Point(128, 118);
 			this->textBox92->Name = L"textBox92";
 			this->textBox92->Size = System::Drawing::Size(41, 20);
@@ -437,6 +457,7 @@ private: System::Windows::Forms::Button^ button2;
 			// 
 			// textBox93
 			// 
+			this->textBox93->Enabled = false;
 			this->textBox93->Location = System::Drawing::Point(81, 144);
 			this->textBox93->Name = L"textBox93";
 			this->textBox93->Size = System::Drawing::Size(41, 20);
@@ -444,6 +465,7 @@ private: System::Windows::Forms::Button^ button2;
 			// 
 			// textBox94
 			// 
+			this->textBox94->Enabled = false;
 			this->textBox94->Location = System::Drawing::Point(34, 144);
 			this->textBox94->Name = L"textBox94";
 			this->textBox94->Size = System::Drawing::Size(41, 20);
@@ -451,6 +473,7 @@ private: System::Windows::Forms::Button^ button2;
 			// 
 			// textBox95
 			// 
+			this->textBox95->Enabled = false;
 			this->textBox95->Location = System::Drawing::Point(81, 118);
 			this->textBox95->Name = L"textBox95";
 			this->textBox95->Size = System::Drawing::Size(41, 20);
@@ -458,6 +481,7 @@ private: System::Windows::Forms::Button^ button2;
 			// 
 			// textBox96
 			// 
+			this->textBox96->Enabled = false;
 			this->textBox96->Location = System::Drawing::Point(34, 118);
 			this->textBox96->Name = L"textBox96";
 			this->textBox96->Size = System::Drawing::Size(41, 20);
@@ -531,6 +555,7 @@ private: System::Windows::Forms::Button^ button2;
 			// 
 			// textBox37
 			// 
+			this->textBox37->Enabled = false;
 			this->textBox37->Location = System::Drawing::Point(175, 92);
 			this->textBox37->Name = L"textBox37";
 			this->textBox37->Size = System::Drawing::Size(41, 20);
@@ -538,6 +563,7 @@ private: System::Windows::Forms::Button^ button2;
 			// 
 			// textBox38
 			// 
+			this->textBox38->Enabled = false;
 			this->textBox38->Location = System::Drawing::Point(128, 92);
 			this->textBox38->Name = L"textBox38";
 			this->textBox38->Size = System::Drawing::Size(41, 20);
@@ -545,6 +571,7 @@ private: System::Windows::Forms::Button^ button2;
 			// 
 			// textBox39
 			// 
+			this->textBox39->Enabled = false;
 			this->textBox39->Location = System::Drawing::Point(175, 66);
 			this->textBox39->Name = L"textBox39";
 			this->textBox39->Size = System::Drawing::Size(41, 20);
@@ -552,6 +579,7 @@ private: System::Windows::Forms::Button^ button2;
 			// 
 			// textBox40
 			// 
+			this->textBox40->Enabled = false;
 			this->textBox40->Location = System::Drawing::Point(128, 66);
 			this->textBox40->Name = L"textBox40";
 			this->textBox40->Size = System::Drawing::Size(41, 20);
@@ -613,6 +641,7 @@ private: System::Windows::Forms::Button^ button2;
 			// 
 			// textBox33
 			// 
+			this->textBox33->Enabled = false;
 			this->textBox33->Location = System::Drawing::Point(81, 92);
 			this->textBox33->Name = L"textBox33";
 			this->textBox33->Size = System::Drawing::Size(41, 20);
@@ -620,6 +649,7 @@ private: System::Windows::Forms::Button^ button2;
 			// 
 			// textBox34
 			// 
+			this->textBox34->Enabled = false;
 			this->textBox34->Location = System::Drawing::Point(34, 92);
 			this->textBox34->Name = L"textBox34";
 			this->textBox34->Size = System::Drawing::Size(41, 20);
@@ -627,6 +657,7 @@ private: System::Windows::Forms::Button^ button2;
 			// 
 			// textBox35
 			// 
+			this->textBox35->Enabled = false;
 			this->textBox35->Location = System::Drawing::Point(81, 66);
 			this->textBox35->Name = L"textBox35";
 			this->textBox35->Size = System::Drawing::Size(41, 20);
@@ -634,6 +665,7 @@ private: System::Windows::Forms::Button^ button2;
 			// 
 			// textBox36
 			// 
+			this->textBox36->Enabled = false;
 			this->textBox36->Location = System::Drawing::Point(34, 66);
 			this->textBox36->Name = L"textBox36";
 			this->textBox36->Size = System::Drawing::Size(41, 20);
@@ -643,6 +675,22 @@ private: System::Windows::Forms::Button^ button2;
 			// 
 			this->groupBox1->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(192)), static_cast<System::Int32>(static_cast<System::Byte>(255)),
 				static_cast<System::Int32>(static_cast<System::Byte>(255)));
+			this->groupBox1->Controls->Add(this->comboBox16);
+			this->groupBox1->Controls->Add(this->comboBox15);
+			this->groupBox1->Controls->Add(this->comboBox14);
+			this->groupBox1->Controls->Add(this->comboBox13);
+			this->groupBox1->Controls->Add(this->comboBox12);
+			this->groupBox1->Controls->Add(this->comboBox11);
+			this->groupBox1->Controls->Add(this->comboBox10);
+			this->groupBox1->Controls->Add(this->comboBox9);
+			this->groupBox1->Controls->Add(this->comboBox8);
+			this->groupBox1->Controls->Add(this->comboBox7);
+			this->groupBox1->Controls->Add(this->comboBox6);
+			this->groupBox1->Controls->Add(this->comboBox5);
+			this->groupBox1->Controls->Add(this->comboBox4);
+			this->groupBox1->Controls->Add(this->comboBox3);
+			this->groupBox1->Controls->Add(this->comboBox2);
+			this->groupBox1->Controls->Add(this->comboBox1);
 			this->groupBox1->Controls->Add(this->textBox49);
 			this->groupBox1->Controls->Add(this->textBox50);
 			this->groupBox1->Controls->Add(this->textBox51);
@@ -651,10 +699,6 @@ private: System::Windows::Forms::Button^ button2;
 			this->groupBox1->Controls->Add(this->textBox54);
 			this->groupBox1->Controls->Add(this->textBox55);
 			this->groupBox1->Controls->Add(this->textBox56);
-			this->groupBox1->Controls->Add(this->textBox57);
-			this->groupBox1->Controls->Add(this->textBox58);
-			this->groupBox1->Controls->Add(this->textBox59);
-			this->groupBox1->Controls->Add(this->textBox60);
 			this->groupBox1->Controls->Add(this->textBox61);
 			this->groupBox1->Controls->Add(this->textBox62);
 			this->groupBox1->Controls->Add(this->textBox63);
@@ -667,10 +711,6 @@ private: System::Windows::Forms::Button^ button2;
 			this->groupBox1->Controls->Add(this->textBox70);
 			this->groupBox1->Controls->Add(this->textBox71);
 			this->groupBox1->Controls->Add(this->textBox72);
-			this->groupBox1->Controls->Add(this->textBox73);
-			this->groupBox1->Controls->Add(this->textBox74);
-			this->groupBox1->Controls->Add(this->textBox75);
-			this->groupBox1->Controls->Add(this->textBox76);
 			this->groupBox1->Controls->Add(this->textBox77);
 			this->groupBox1->Controls->Add(this->textBox78);
 			this->groupBox1->Controls->Add(this->textBox79);
@@ -692,10 +732,6 @@ private: System::Windows::Forms::Button^ button2;
 			this->groupBox1->Controls->Add(this->textBox46);
 			this->groupBox1->Controls->Add(this->textBox47);
 			this->groupBox1->Controls->Add(this->textBox48);
-			this->groupBox1->Controls->Add(this->textBox17);
-			this->groupBox1->Controls->Add(this->textBox18);
-			this->groupBox1->Controls->Add(this->textBox19);
-			this->groupBox1->Controls->Add(this->textBox20);
 			this->groupBox1->Controls->Add(this->textBox21);
 			this->groupBox1->Controls->Add(this->textBox22);
 			this->groupBox1->Controls->Add(this->textBox23);
@@ -708,10 +744,6 @@ private: System::Windows::Forms::Button^ button2;
 			this->groupBox1->Controls->Add(this->textBox30);
 			this->groupBox1->Controls->Add(this->textBox31);
 			this->groupBox1->Controls->Add(this->textBox32);
-			this->groupBox1->Controls->Add(this->textBox13);
-			this->groupBox1->Controls->Add(this->textBox14);
-			this->groupBox1->Controls->Add(this->textBox15);
-			this->groupBox1->Controls->Add(this->textBox16);
 			this->groupBox1->Controls->Add(this->label5);
 			this->groupBox1->Controls->Add(this->label1);
 			this->groupBox1->Controls->Add(this->textBox9);
@@ -735,6 +767,166 @@ private: System::Windows::Forms::Button^ button2;
 			this->groupBox1->TabIndex = 2;
 			this->groupBox1->TabStop = false;
 			this->groupBox1->Text = L"Tabla de verdad";
+			// 
+			// comboBox16
+			// 
+			this->comboBox16->DropDownStyle = System::Windows::Forms::ComboBoxStyle::DropDownList;
+			this->comboBox16->FormattingEnabled = true;
+			this->comboBox16->Items->AddRange(gcnew cli::array< System::Object^  >(2) { L"0", L"1" });
+			this->comboBox16->Location = System::Drawing::Point(209, 444);
+			this->comboBox16->Name = L"comboBox16";
+			this->comboBox16->Size = System::Drawing::Size(30, 21);
+			this->comboBox16->TabIndex = 117;
+			// 
+			// comboBox15
+			// 
+			this->comboBox15->DropDownStyle = System::Windows::Forms::ComboBoxStyle::DropDownList;
+			this->comboBox15->FormattingEnabled = true;
+			this->comboBox15->Items->AddRange(gcnew cli::array< System::Object^  >(2) { L"0", L"1" });
+			this->comboBox15->Location = System::Drawing::Point(209, 418);
+			this->comboBox15->Name = L"comboBox15";
+			this->comboBox15->Size = System::Drawing::Size(30, 21);
+			this->comboBox15->TabIndex = 116;
+			// 
+			// comboBox14
+			// 
+			this->comboBox14->DropDownStyle = System::Windows::Forms::ComboBoxStyle::DropDownList;
+			this->comboBox14->FormattingEnabled = true;
+			this->comboBox14->Items->AddRange(gcnew cli::array< System::Object^  >(2) { L"0", L"1" });
+			this->comboBox14->Location = System::Drawing::Point(209, 392);
+			this->comboBox14->Name = L"comboBox14";
+			this->comboBox14->Size = System::Drawing::Size(30, 21);
+			this->comboBox14->TabIndex = 115;
+			// 
+			// comboBox13
+			// 
+			this->comboBox13->DropDownStyle = System::Windows::Forms::ComboBoxStyle::DropDownList;
+			this->comboBox13->FormattingEnabled = true;
+			this->comboBox13->Items->AddRange(gcnew cli::array< System::Object^  >(2) { L"0", L"1" });
+			this->comboBox13->Location = System::Drawing::Point(209, 366);
+			this->comboBox13->Name = L"comboBox13";
+			this->comboBox13->Size = System::Drawing::Size(30, 21);
+			this->comboBox13->TabIndex = 114;
+			// 
+			// comboBox12
+			// 
+			this->comboBox12->DropDownStyle = System::Windows::Forms::ComboBoxStyle::DropDownList;
+			this->comboBox12->FormattingEnabled = true;
+			this->comboBox12->Items->AddRange(gcnew cli::array< System::Object^  >(2) { L"0", L"1" });
+			this->comboBox12->Location = System::Drawing::Point(209, 339);
+			this->comboBox12->Name = L"comboBox12";
+			this->comboBox12->Size = System::Drawing::Size(30, 21);
+			this->comboBox12->TabIndex = 113;
+			// 
+			// comboBox11
+			// 
+			this->comboBox11->DropDownStyle = System::Windows::Forms::ComboBoxStyle::DropDownList;
+			this->comboBox11->FormattingEnabled = true;
+			this->comboBox11->Items->AddRange(gcnew cli::array< System::Object^  >(2) { L"0", L"1" });
+			this->comboBox11->Location = System::Drawing::Point(209, 313);
+			this->comboBox11->Name = L"comboBox11";
+			this->comboBox11->Size = System::Drawing::Size(30, 21);
+			this->comboBox11->TabIndex = 112;
+			// 
+			// comboBox10
+			// 
+			this->comboBox10->DropDownStyle = System::Windows::Forms::ComboBoxStyle::DropDownList;
+			this->comboBox10->FormattingEnabled = true;
+			this->comboBox10->Items->AddRange(gcnew cli::array< System::Object^  >(2) { L"0", L"1" });
+			this->comboBox10->Location = System::Drawing::Point(209, 287);
+			this->comboBox10->Name = L"comboBox10";
+			this->comboBox10->Size = System::Drawing::Size(30, 21);
+			this->comboBox10->TabIndex = 111;
+			// 
+			// comboBox9
+			// 
+			this->comboBox9->DropDownStyle = System::Windows::Forms::ComboBoxStyle::DropDownList;
+			this->comboBox9->FormattingEnabled = true;
+			this->comboBox9->Items->AddRange(gcnew cli::array< System::Object^  >(2) { L"0", L"1" });
+			this->comboBox9->Location = System::Drawing::Point(209, 261);
+			this->comboBox9->Name = L"comboBox9";
+			this->comboBox9->Size = System::Drawing::Size(30, 21);
+			this->comboBox9->TabIndex = 110;
+			// 
+			// comboBox8
+			// 
+			this->comboBox8->DropDownStyle = System::Windows::Forms::ComboBoxStyle::DropDownList;
+			this->comboBox8->FormattingEnabled = true;
+			this->comboBox8->Items->AddRange(gcnew cli::array< System::Object^  >(2) { L"0", L"1" });
+			this->comboBox8->Location = System::Drawing::Point(209, 235);
+			this->comboBox8->Name = L"comboBox8";
+			this->comboBox8->Size = System::Drawing::Size(30, 21);
+			this->comboBox8->TabIndex = 109;
+			// 
+			// comboBox7
+			// 
+			this->comboBox7->DropDownStyle = System::Windows::Forms::ComboBoxStyle::DropDownList;
+			this->comboBox7->FormattingEnabled = true;
+			this->comboBox7->Items->AddRange(gcnew cli::array< System::Object^  >(2) { L"0", L"1" });
+			this->comboBox7->Location = System::Drawing::Point(209, 209);
+			this->comboBox7->Name = L"comboBox7";
+			this->comboBox7->Size = System::Drawing::Size(30, 21);
+			this->comboBox7->TabIndex = 108;
+			// 
+			// comboBox6
+			// 
+			this->comboBox6->DropDownStyle = System::Windows::Forms::ComboBoxStyle::DropDownList;
+			this->comboBox6->FormattingEnabled = true;
+			this->comboBox6->Items->AddRange(gcnew cli::array< System::Object^  >(2) { L"0", L"1" });
+			this->comboBox6->Location = System::Drawing::Point(209, 183);
+			this->comboBox6->Name = L"comboBox6";
+			this->comboBox6->Size = System::Drawing::Size(30, 21);
+			this->comboBox6->TabIndex = 107;
+			// 
+			// comboBox5
+			// 
+			this->comboBox5->DropDownStyle = System::Windows::Forms::ComboBoxStyle::DropDownList;
+			this->comboBox5->FormattingEnabled = true;
+			this->comboBox5->Items->AddRange(gcnew cli::array< System::Object^  >(2) { L"0", L"1" });
+			this->comboBox5->Location = System::Drawing::Point(209, 157);
+			this->comboBox5->Name = L"comboBox5";
+			this->comboBox5->Size = System::Drawing::Size(30, 21);
+			this->comboBox5->TabIndex = 106;
+			// 
+			// comboBox4
+			// 
+			this->comboBox4->DropDownStyle = System::Windows::Forms::ComboBoxStyle::DropDownList;
+			this->comboBox4->FormattingEnabled = true;
+			this->comboBox4->Items->AddRange(gcnew cli::array< System::Object^  >(2) { L"0", L"1" });
+			this->comboBox4->Location = System::Drawing::Point(209, 130);
+			this->comboBox4->Name = L"comboBox4";
+			this->comboBox4->Size = System::Drawing::Size(30, 21);
+			this->comboBox4->TabIndex = 105;
+			// 
+			// comboBox3
+			// 
+			this->comboBox3->DropDownStyle = System::Windows::Forms::ComboBoxStyle::DropDownList;
+			this->comboBox3->FormattingEnabled = true;
+			this->comboBox3->Items->AddRange(gcnew cli::array< System::Object^  >(2) { L"0", L"1" });
+			this->comboBox3->Location = System::Drawing::Point(209, 104);
+			this->comboBox3->Name = L"comboBox3";
+			this->comboBox3->Size = System::Drawing::Size(30, 21);
+			this->comboBox3->TabIndex = 104;
+			// 
+			// comboBox2
+			// 
+			this->comboBox2->DropDownStyle = System::Windows::Forms::ComboBoxStyle::DropDownList;
+			this->comboBox2->FormattingEnabled = true;
+			this->comboBox2->Items->AddRange(gcnew cli::array< System::Object^  >(2) { L"0", L"1" });
+			this->comboBox2->Location = System::Drawing::Point(209, 78);
+			this->comboBox2->Name = L"comboBox2";
+			this->comboBox2->Size = System::Drawing::Size(30, 21);
+			this->comboBox2->TabIndex = 103;
+			// 
+			// comboBox1
+			// 
+			this->comboBox1->DropDownStyle = System::Windows::Forms::ComboBoxStyle::DropDownList;
+			this->comboBox1->FormattingEnabled = true;
+			this->comboBox1->Items->AddRange(gcnew cli::array< System::Object^  >(2) { L"0", L"1" });
+			this->comboBox1->Location = System::Drawing::Point(209, 52);
+			this->comboBox1->Name = L"comboBox1";
+			this->comboBox1->Size = System::Drawing::Size(30, 21);
+			this->comboBox1->TabIndex = 102;
 			// 
 			// textBox49
 			// 
@@ -807,38 +999,6 @@ private: System::Windows::Forms::Button^ button2;
 			this->textBox56->Size = System::Drawing::Size(36, 20);
 			this->textBox56->TabIndex = 94;
 			this->textBox56->Text = L"0";
-			// 
-			// textBox57
-			// 
-			this->textBox57->Location = System::Drawing::Point(184, 445);
-			this->textBox57->Name = L"textBox57";
-			this->textBox57->Size = System::Drawing::Size(36, 20);
-			this->textBox57->TabIndex = 93;
-			this->textBox57->Text = L"1";
-			// 
-			// textBox58
-			// 
-			this->textBox58->Location = System::Drawing::Point(184, 419);
-			this->textBox58->Name = L"textBox58";
-			this->textBox58->Size = System::Drawing::Size(36, 20);
-			this->textBox58->TabIndex = 92;
-			this->textBox58->Text = L"1";
-			// 
-			// textBox59
-			// 
-			this->textBox59->Location = System::Drawing::Point(184, 393);
-			this->textBox59->Name = L"textBox59";
-			this->textBox59->Size = System::Drawing::Size(36, 20);
-			this->textBox59->TabIndex = 91;
-			this->textBox59->Text = L"0";
-			// 
-			// textBox60
-			// 
-			this->textBox60->Location = System::Drawing::Point(184, 367);
-			this->textBox60->Name = L"textBox60";
-			this->textBox60->Size = System::Drawing::Size(36, 20);
-			this->textBox60->TabIndex = 90;
-			this->textBox60->Text = L"1";
 			// 
 			// textBox61
 			// 
@@ -947,38 +1107,6 @@ private: System::Windows::Forms::Button^ button2;
 			this->textBox72->Size = System::Drawing::Size(40, 20);
 			this->textBox72->TabIndex = 78;
 			this->textBox72->Text = L"1";
-			// 
-			// textBox73
-			// 
-			this->textBox73->Location = System::Drawing::Point(184, 340);
-			this->textBox73->Name = L"textBox73";
-			this->textBox73->Size = System::Drawing::Size(36, 20);
-			this->textBox73->TabIndex = 77;
-			this->textBox73->Text = L"0";
-			// 
-			// textBox74
-			// 
-			this->textBox74->Location = System::Drawing::Point(184, 314);
-			this->textBox74->Name = L"textBox74";
-			this->textBox74->Size = System::Drawing::Size(36, 20);
-			this->textBox74->TabIndex = 76;
-			this->textBox74->Text = L"1";
-			// 
-			// textBox75
-			// 
-			this->textBox75->Location = System::Drawing::Point(184, 288);
-			this->textBox75->Name = L"textBox75";
-			this->textBox75->Size = System::Drawing::Size(36, 20);
-			this->textBox75->TabIndex = 75;
-			this->textBox75->Text = L"0";
-			// 
-			// textBox76
-			// 
-			this->textBox76->Location = System::Drawing::Point(184, 262);
-			this->textBox76->Name = L"textBox76";
-			this->textBox76->Size = System::Drawing::Size(36, 20);
-			this->textBox76->TabIndex = 74;
-			this->textBox76->Text = L"1";
 			// 
 			// textBox77
 			// 
@@ -1171,38 +1299,6 @@ private: System::Windows::Forms::Button^ button2;
 			this->textBox48->TabIndex = 53;
 			this->textBox48->Text = L"0";
 			// 
-			// textBox17
-			// 
-			this->textBox17->Location = System::Drawing::Point(184, 236);
-			this->textBox17->Name = L"textBox17";
-			this->textBox17->Size = System::Drawing::Size(36, 20);
-			this->textBox17->TabIndex = 52;
-			this->textBox17->Text = L"1";
-			// 
-			// textBox18
-			// 
-			this->textBox18->Location = System::Drawing::Point(184, 210);
-			this->textBox18->Name = L"textBox18";
-			this->textBox18->Size = System::Drawing::Size(36, 20);
-			this->textBox18->TabIndex = 51;
-			this->textBox18->Text = L"1";
-			// 
-			// textBox19
-			// 
-			this->textBox19->Location = System::Drawing::Point(184, 184);
-			this->textBox19->Name = L"textBox19";
-			this->textBox19->Size = System::Drawing::Size(36, 20);
-			this->textBox19->TabIndex = 50;
-			this->textBox19->Text = L"0";
-			// 
-			// textBox20
-			// 
-			this->textBox20->Location = System::Drawing::Point(184, 158);
-			this->textBox20->Name = L"textBox20";
-			this->textBox20->Size = System::Drawing::Size(36, 20);
-			this->textBox20->TabIndex = 49;
-			this->textBox20->Text = L"0";
-			// 
 			// textBox21
 			// 
 			this->textBox21->Enabled = false;
@@ -1311,44 +1407,12 @@ private: System::Windows::Forms::Button^ button2;
 			this->textBox32->TabIndex = 37;
 			this->textBox32->Text = L"0";
 			// 
-			// textBox13
-			// 
-			this->textBox13->Location = System::Drawing::Point(184, 131);
-			this->textBox13->Name = L"textBox13";
-			this->textBox13->Size = System::Drawing::Size(36, 20);
-			this->textBox13->TabIndex = 36;
-			this->textBox13->Text = L"0";
-			// 
-			// textBox14
-			// 
-			this->textBox14->Location = System::Drawing::Point(184, 105);
-			this->textBox14->Name = L"textBox14";
-			this->textBox14->Size = System::Drawing::Size(36, 20);
-			this->textBox14->TabIndex = 35;
-			this->textBox14->Text = L"0";
-			// 
-			// textBox15
-			// 
-			this->textBox15->Location = System::Drawing::Point(184, 79);
-			this->textBox15->Name = L"textBox15";
-			this->textBox15->Size = System::Drawing::Size(36, 20);
-			this->textBox15->TabIndex = 34;
-			this->textBox15->Text = L"0";
-			// 
-			// textBox16
-			// 
-			this->textBox16->Location = System::Drawing::Point(184, 53);
-			this->textBox16->Name = L"textBox16";
-			this->textBox16->Size = System::Drawing::Size(36, 20);
-			this->textBox16->TabIndex = 33;
-			this->textBox16->Text = L"0";
-			// 
 			// label5
 			// 
 			this->label5->AutoSize = true;
 			this->label5->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label5->Location = System::Drawing::Point(191, 30);
+			this->label5->Location = System::Drawing::Point(215, 28);
 			this->label5->Name = L"label5";
 			this->label5->Size = System::Drawing::Size(14, 20);
 			this->label5->TabIndex = 32;
@@ -1534,22 +1598,22 @@ private: System::Windows::Forms::Button^ button2;
 		}
 #pragma endregion
 	private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
-		this->textBox36->Text = this->textBox16->Text;
-		this->textBox35->Text = this->textBox15->Text;
-		this->textBox40->Text = this->textBox13->Text;
-		this->textBox39->Text = this->textBox14->Text;
-		this->textBox34->Text = this->textBox20->Text;
-		this->textBox33->Text = this->textBox19->Text;
-		this->textBox38->Text = this->textBox17->Text;
-		this->textBox37->Text = this->textBox18->Text;
-		this->textBox96->Text = this->textBox60->Text;
-		this->textBox95->Text = this->textBox59->Text;
-		this->textBox92->Text = this->textBox57->Text;
-		this->textBox91->Text = this->textBox58->Text;
-		this->textBox94->Text = this->textBox76->Text;
-		this->textBox93->Text = this->textBox75->Text;
-		this->textBox90->Text = this->textBox73->Text;
-		this->textBox89->Text = this->textBox74->Text;
+		this->textBox36->Text = this->comboBox1->Text;
+		this->textBox35->Text = this->comboBox2->Text;
+		this->textBox39->Text = this->comboBox3->Text;
+		this->textBox40->Text = this->comboBox4->Text;
+		this->textBox34->Text = this->comboBox5->Text;
+		this->textBox33->Text = this->comboBox6->Text;
+		this->textBox37->Text = this->comboBox7->Text;
+		this->textBox38->Text = this->comboBox8->Text;
+		this->textBox94->Text = this->comboBox9->Text;
+		this->textBox93->Text = this->comboBox10->Text;
+		this->textBox89->Text = this->comboBox11->Text;
+		this->textBox90->Text = this->comboBox12->Text;
+		this->textBox96->Text = this->comboBox13->Text;
+		this->textBox95->Text = this->comboBox14->Text;
+		this->textBox91->Text = this->comboBox15->Text;
+		this->textBox92->Text = this->comboBox16->Text;
 	}
 private: System::Void button2_Click(System::Object^ sender, System::EventArgs^ e) {
 	this->Close();

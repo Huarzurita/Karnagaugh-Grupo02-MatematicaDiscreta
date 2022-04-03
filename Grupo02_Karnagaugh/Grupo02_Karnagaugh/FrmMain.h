@@ -95,6 +95,7 @@ namespace Grupo02Karnagaugh {
 			// 
 			// comboBox1
 			// 
+			this->comboBox1->DropDownStyle = System::Windows::Forms::ComboBoxStyle::DropDownList;
 			this->comboBox1->FormattingEnabled = true;
 			this->comboBox1->Items->AddRange(gcnew cli::array< System::Object^  >(3) { L"2", L"3", L"4" });
 			this->comboBox1->Location = System::Drawing::Point(196, 170);
@@ -142,6 +143,7 @@ namespace Grupo02Karnagaugh {
 			Operacion4^ op4 = gcnew Operacion4();
 			op4->Show();
 		}
+		
 	}
 	
 	private: System::Void button2_Click(System::Object^ sender, System::EventArgs^ e) {
