@@ -10,3 +10,8 @@ D:\UPC\CICLO 3\Matemática Discreta\Karnagaugh-Grupo02-MatematicaDiscreta\Grupo0
 D:\UPC\CICLO 3\Matemática Discreta\Karnagaugh-Grupo02-MatematicaDiscreta\Grupo02_Karnagaugh\Grupo02_Karnagaugh\x64\Debug\Grupo02Karnagaugh.Operacion3.resources
 D:\UPC\CICLO 3\Matemática Discreta\Karnagaugh-Grupo02-MatematicaDiscreta\Grupo02_Karnagaugh\Grupo02_Karnagaugh\x64\Debug\Grupo02Karnagaugh.Operacion4.resources
 D:\UPC\CICLO 3\Matemática Discreta\Karnagaugh-Grupo02-MatematicaDiscreta\Grupo02_Karnagaugh\Grupo02_Karnagaugh\x64\Debug\Grupo02_Karnagaugh.vcxproj.GenerateResource.cache
+C:\Users\LUCERO Y ALONSO\Desktop\TODO\Karnagaugh-Grupo02-MatematicaDiscreta\Grupo02_Karnagaugh\Grupo02_Karnagaugh\x64\Debug\Grupo02Karnagaugh.FrmMain.resources
+C:\Users\LUCERO Y ALONSO\Desktop\TODO\Karnagaugh-Grupo02-MatematicaDiscreta\Grupo02_Karnagaugh\Grupo02_Karnagaugh\x64\Debug\Grupo02Karnagaugh.Operacion.resources
+C:\Users\LUCERO Y ALONSO\Desktop\TODO\Karnagaugh-Grupo02-MatematicaDiscreta\Grupo02_Karnagaugh\Grupo02_Karnagaugh\x64\Debug\Grupo02Karnagaugh.Operacion3.resources
+C:\Users\LUCERO Y ALONSO\Desktop\TODO\Karnagaugh-Grupo02-MatematicaDiscreta\Grupo02_Karnagaugh\Grupo02_Karnagaugh\x64\Debug\Grupo02Karnagaugh.Operacion4.resources
+C:\Users\LUCERO Y ALONSO\Desktop\TODO\Karnagaugh-Grupo02-MatematicaDiscreta\Grupo02_Karnagaugh\Grupo02_Karnagaugh\x64\Debug\Grupo02_Karnagaugh.vcxproj.GenerateResource.cache

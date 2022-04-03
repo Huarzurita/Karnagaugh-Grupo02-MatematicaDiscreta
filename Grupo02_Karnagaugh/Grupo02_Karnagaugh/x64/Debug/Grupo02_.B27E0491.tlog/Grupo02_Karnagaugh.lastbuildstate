@@ -1,2 +1,2 @@
-PlatformToolSet=v142:VCToolArchitecture=Native32Bit:VCToolsVersion=14.29.30133:TargetPlatformVersion=10.0.19041.0:TargetFrameworkVersion=v4.6.1::EnableManagedIncrementalBuild=true:
-Debug|x64|D:\UPC\CICLO 3\Matemática Discreta\Karnagaugh-Grupo02-MatematicaDiscreta\Grupo02_Karnagaugh\|
+PlatformToolSet=v142:VCToolArchitecture=Native32Bit:VCToolsVersion=14.29.30133:VCServicingVersionMFC=14.29.30136:VCServicingVersionATL=14.29.30136:VCServicingVersionCrtHeaders=14.29.30136:VCServicingVersionCompilers=14.29.30136:TargetPlatformVersion=10.0.19041.0:TargetFrameworkVersion=v4.6.1::EnableManagedIncrementalBuild=true:
+Debug|x64|C:\Users\LUCERO Y ALONSO\Desktop\TODO\Karnagaugh-Grupo02-MatematicaDiscreta\Grupo02_Karnagaugh\|

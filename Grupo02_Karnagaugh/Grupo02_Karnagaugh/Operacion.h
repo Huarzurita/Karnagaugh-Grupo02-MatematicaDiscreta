@@ -106,6 +106,9 @@ namespace Grupo02Karnagaugh {
 			this->textBox7 = (gcnew System::Windows::Forms::TextBox());
 			this->textBox8 = (gcnew System::Windows::Forms::TextBox());
 			this->groupBox1 = (gcnew System::Windows::Forms::GroupBox());
+			this->comboBox4 = (gcnew System::Windows::Forms::ComboBox());
+			this->comboBox3 = (gcnew System::Windows::Forms::ComboBox());
+			this->comboBox2 = (gcnew System::Windows::Forms::ComboBox());
 			this->comboBox1 = (gcnew System::Windows::Forms::ComboBox());
 			this->groupBox2 = (gcnew System::Windows::Forms::GroupBox());
 			this->button1 = (gcnew System::Windows::Forms::Button());
@@ -118,9 +121,6 @@ namespace Grupo02Karnagaugh {
 			this->textBox14 = (gcnew System::Windows::Forms::TextBox());
 			this->textBox13 = (gcnew System::Windows::Forms::TextBox());
 			this->button2 = (gcnew System::Windows::Forms::Button());
-			this->comboBox2 = (gcnew System::Windows::Forms::ComboBox());
-			this->comboBox3 = (gcnew System::Windows::Forms::ComboBox());
-			this->comboBox4 = (gcnew System::Windows::Forms::ComboBox());
 			this->groupBox1->SuspendLayout();
 			this->groupBox2->SuspendLayout();
 			this->SuspendLayout();
@@ -130,9 +130,10 @@ namespace Grupo02Karnagaugh {
 			this->label2->AutoSize = true;
 			this->label2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label2->Location = System::Drawing::Point(50, 26);
+			this->label2->Location = System::Drawing::Point(67, 32);
+			this->label2->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->label2->Name = L"label2";
-			this->label2->Size = System::Drawing::Size(16, 20);
+			this->label2->Size = System::Drawing::Size(22, 25);
 			this->label2->TabIndex = 1;
 			this->label2->Text = L"x";
 			// 
@@ -141,9 +142,10 @@ namespace Grupo02Karnagaugh {
 			this->label3->AutoSize = true;
 			this->label3->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label3->Location = System::Drawing::Point(83, 26);
+			this->label3->Location = System::Drawing::Point(111, 32);
+			this->label3->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->label3->Name = L"label3";
-			this->label3->Size = System::Drawing::Size(16, 20);
+			this->label3->Size = System::Drawing::Size(22, 25);
 			this->label3->TabIndex = 2;
 			this->label3->Text = L"y";
 			// 
@@ -152,88 +154,97 @@ namespace Grupo02Karnagaugh {
 			this->label4->AutoSize = true;
 			this->label4->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label4->Location = System::Drawing::Point(137, 26);
+			this->label4->Location = System::Drawing::Point(183, 32);
+			this->label4->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->label4->Name = L"label4";
-			this->label4->Size = System::Drawing::Size(14, 20);
+			this->label4->Size = System::Drawing::Size(17, 25);
 			this->label4->TabIndex = 3;
 			this->label4->Text = L"f";
 			// 
 			// textBox1
 			// 
 			this->textBox1->Enabled = false;
-			this->textBox1->Location = System::Drawing::Point(42, 59);
+			this->textBox1->Location = System::Drawing::Point(56, 73);
+			this->textBox1->Margin = System::Windows::Forms::Padding(4);
 			this->textBox1->Name = L"textBox1";
-			this->textBox1->Size = System::Drawing::Size(40, 20);
+			this->textBox1->Size = System::Drawing::Size(52, 29);
 			this->textBox1->TabIndex = 4;
 			this->textBox1->Text = L"0";
 			// 
 			// textBox2
 			// 
 			this->textBox2->Enabled = false;
-			this->textBox2->Location = System::Drawing::Point(42, 85);
+			this->textBox2->Location = System::Drawing::Point(56, 105);
+			this->textBox2->Margin = System::Windows::Forms::Padding(4);
 			this->textBox2->Name = L"textBox2";
-			this->textBox2->Size = System::Drawing::Size(40, 20);
+			this->textBox2->Size = System::Drawing::Size(52, 29);
 			this->textBox2->TabIndex = 5;
 			this->textBox2->Text = L"0";
 			// 
 			// textBox3
 			// 
 			this->textBox3->Enabled = false;
-			this->textBox3->Location = System::Drawing::Point(42, 111);
+			this->textBox3->Location = System::Drawing::Point(56, 137);
+			this->textBox3->Margin = System::Windows::Forms::Padding(4);
 			this->textBox3->Name = L"textBox3";
-			this->textBox3->Size = System::Drawing::Size(40, 20);
+			this->textBox3->Size = System::Drawing::Size(52, 29);
 			this->textBox3->TabIndex = 6;
 			this->textBox3->Text = L"1";
 			// 
 			// textBox4
 			// 
 			this->textBox4->Enabled = false;
-			this->textBox4->Location = System::Drawing::Point(42, 137);
+			this->textBox4->Location = System::Drawing::Point(56, 169);
+			this->textBox4->Margin = System::Windows::Forms::Padding(4);
 			this->textBox4->Name = L"textBox4";
-			this->textBox4->Size = System::Drawing::Size(40, 20);
+			this->textBox4->Size = System::Drawing::Size(52, 29);
 			this->textBox4->TabIndex = 7;
 			this->textBox4->Text = L"1";
 			// 
 			// textBox5
 			// 
 			this->textBox5->Enabled = false;
-			this->textBox5->Location = System::Drawing::Point(80, 137);
+			this->textBox5->Location = System::Drawing::Point(107, 169);
+			this->textBox5->Margin = System::Windows::Forms::Padding(4);
 			this->textBox5->Name = L"textBox5";
-			this->textBox5->Size = System::Drawing::Size(44, 20);
+			this->textBox5->Size = System::Drawing::Size(57, 29);
 			this->textBox5->TabIndex = 11;
 			this->textBox5->Text = L"1";
 			// 
 			// textBox6
 			// 
 			this->textBox6->Enabled = false;
-			this->textBox6->Location = System::Drawing::Point(80, 111);
+			this->textBox6->Location = System::Drawing::Point(107, 137);
+			this->textBox6->Margin = System::Windows::Forms::Padding(4);
 			this->textBox6->Name = L"textBox6";
-			this->textBox6->Size = System::Drawing::Size(44, 20);
+			this->textBox6->Size = System::Drawing::Size(57, 29);
 			this->textBox6->TabIndex = 10;
 			this->textBox6->Text = L"0";
 			// 
 			// textBox7
 			// 
 			this->textBox7->Enabled = false;
-			this->textBox7->Location = System::Drawing::Point(80, 85);
+			this->textBox7->Location = System::Drawing::Point(107, 105);
+			this->textBox7->Margin = System::Windows::Forms::Padding(4);
 			this->textBox7->Name = L"textBox7";
-			this->textBox7->Size = System::Drawing::Size(44, 20);
+			this->textBox7->Size = System::Drawing::Size(57, 29);
 			this->textBox7->TabIndex = 9;
 			this->textBox7->Text = L"1";
 			// 
 			// textBox8
 			// 
 			this->textBox8->Enabled = false;
-			this->textBox8->Location = System::Drawing::Point(80, 59);
+			this->textBox8->Location = System::Drawing::Point(107, 73);
+			this->textBox8->Margin = System::Windows::Forms::Padding(4);
 			this->textBox8->Name = L"textBox8";
-			this->textBox8->Size = System::Drawing::Size(44, 20);
+			this->textBox8->Size = System::Drawing::Size(57, 29);
 			this->textBox8->TabIndex = 8;
 			this->textBox8->Text = L"0";
 			// 
 			// groupBox1
 			// 
 			this->groupBox1->AccessibleRole = System::Windows::Forms::AccessibleRole::None;
-			this->groupBox1->BackColor = System::Drawing::SystemColors::ActiveCaption;
+			this->groupBox1->BackColor = System::Drawing::Color::SteelBlue;
 			this->groupBox1->Controls->Add(this->comboBox4);
 			this->groupBox1->Controls->Add(this->comboBox3);
 			this->groupBox1->Controls->Add(this->comboBox2);
@@ -249,26 +260,64 @@ namespace Grupo02Karnagaugh {
 			this->groupBox1->Controls->Add(this->label4);
 			this->groupBox1->Controls->Add(this->label3);
 			this->groupBox1->Controls->Add(this->label2);
-			this->groupBox1->Location = System::Drawing::Point(38, 35);
+			this->groupBox1->Font = (gcnew System::Drawing::Font(L"Bookman Old Style", 10.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->groupBox1->Location = System::Drawing::Point(43, 43);
+			this->groupBox1->Margin = System::Windows::Forms::Padding(4);
 			this->groupBox1->Name = L"groupBox1";
-			this->groupBox1->Size = System::Drawing::Size(180, 208);
+			this->groupBox1->Padding = System::Windows::Forms::Padding(4);
+			this->groupBox1->Size = System::Drawing::Size(274, 256);
 			this->groupBox1->TabIndex = 16;
 			this->groupBox1->TabStop = false;
 			this->groupBox1->Text = L"Tabla de verdad";
+			// 
+			// comboBox4
+			// 
+			this->comboBox4->DropDownStyle = System::Windows::Forms::ComboBoxStyle::DropDownList;
+			this->comboBox4->FormattingEnabled = true;
+			this->comboBox4->Items->AddRange(gcnew cli::array< System::Object^  >(2) { L"0", L"1" });
+			this->comboBox4->Location = System::Drawing::Point(173, 167);
+			this->comboBox4->Margin = System::Windows::Forms::Padding(4);
+			this->comboBox4->Name = L"comboBox4";
+			this->comboBox4->Size = System::Drawing::Size(40, 29);
+			this->comboBox4->TabIndex = 15;
+			// 
+			// comboBox3
+			// 
+			this->comboBox3->DropDownStyle = System::Windows::Forms::ComboBoxStyle::DropDownList;
+			this->comboBox3->FormattingEnabled = true;
+			this->comboBox3->Items->AddRange(gcnew cli::array< System::Object^  >(2) { L"0", L"1" });
+			this->comboBox3->Location = System::Drawing::Point(173, 135);
+			this->comboBox3->Margin = System::Windows::Forms::Padding(4);
+			this->comboBox3->Name = L"comboBox3";
+			this->comboBox3->Size = System::Drawing::Size(40, 29);
+			this->comboBox3->TabIndex = 14;
+			// 
+			// comboBox2
+			// 
+			this->comboBox2->DropDownStyle = System::Windows::Forms::ComboBoxStyle::DropDownList;
+			this->comboBox2->FormattingEnabled = true;
+			this->comboBox2->Items->AddRange(gcnew cli::array< System::Object^  >(2) { L"0", L"1" });
+			this->comboBox2->Location = System::Drawing::Point(173, 103);
+			this->comboBox2->Margin = System::Windows::Forms::Padding(4);
+			this->comboBox2->Name = L"comboBox2";
+			this->comboBox2->Size = System::Drawing::Size(40, 29);
+			this->comboBox2->TabIndex = 13;
 			// 
 			// comboBox1
 			// 
 			this->comboBox1->DropDownStyle = System::Windows::Forms::ComboBoxStyle::DropDownList;
 			this->comboBox1->FormattingEnabled = true;
 			this->comboBox1->Items->AddRange(gcnew cli::array< System::Object^  >(2) { L"0", L"1" });
-			this->comboBox1->Location = System::Drawing::Point(130, 58);
+			this->comboBox1->Location = System::Drawing::Point(173, 71);
+			this->comboBox1->Margin = System::Windows::Forms::Padding(4);
 			this->comboBox1->Name = L"comboBox1";
-			this->comboBox1->Size = System::Drawing::Size(31, 21);
+			this->comboBox1->Size = System::Drawing::Size(40, 29);
 			this->comboBox1->TabIndex = 12;
 			// 
 			// groupBox2
 			// 
-			this->groupBox2->BackColor = System::Drawing::SystemColors::ControlDark;
+			this->groupBox2->BackColor = System::Drawing::Color::LightGreen;
 			this->groupBox2->Controls->Add(this->button1);
 			this->groupBox2->Controls->Add(this->label7);
 			this->groupBox2->Controls->Add(this->label6);
@@ -278,21 +327,28 @@ namespace Grupo02Karnagaugh {
 			this->groupBox2->Controls->Add(this->textBox15);
 			this->groupBox2->Controls->Add(this->textBox14);
 			this->groupBox2->Controls->Add(this->textBox13);
-			this->groupBox2->Location = System::Drawing::Point(256, 35);
+			this->groupBox2->Font = (gcnew System::Drawing::Font(L"Bookman Old Style", 10.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->groupBox2->Location = System::Drawing::Point(373, 43);
+			this->groupBox2->Margin = System::Windows::Forms::Padding(4);
 			this->groupBox2->Name = L"groupBox2";
-			this->groupBox2->Size = System::Drawing::Size(443, 208);
+			this->groupBox2->Padding = System::Windows::Forms::Padding(4);
+			this->groupBox2->Size = System::Drawing::Size(449, 256);
 			this->groupBox2->TabIndex = 17;
 			this->groupBox2->TabStop = false;
 			this->groupBox2->Text = L"Mapa de Karnaugh ";
+			this->groupBox2->Enter += gcnew System::EventHandler(this, &Operacion::groupBox2_Enter);
 			// 
 			// button1
 			// 
-			this->button1->Location = System::Drawing::Point(236, 73);
+			this->button1->BackColor = System::Drawing::Color::MediumSeaGreen;
+			this->button1->Location = System::Drawing::Point(315, 90);
+			this->button1->Margin = System::Windows::Forms::Padding(4);
 			this->button1->Name = L"button1";
-			this->button1->Size = System::Drawing::Size(75, 23);
+			this->button1->Size = System::Drawing::Size(100, 28);
 			this->button1->TabIndex = 8;
 			this->button1->Text = L"Calcular";
-			this->button1->UseVisualStyleBackColor = true;
+			this->button1->UseVisualStyleBackColor = false;
 			this->button1->Click += gcnew System::EventHandler(this, &Operacion::button1_Click);
 			// 
 			// label7
@@ -300,9 +356,10 @@ namespace Grupo02Karnagaugh {
 			this->label7->AutoSize = true;
 			this->label7->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 11.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label7->Location = System::Drawing::Point(51, 87);
+			this->label7->Location = System::Drawing::Point(68, 107);
+			this->label7->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->label7->Name = L"label7";
-			this->label7->Size = System::Drawing::Size(15, 18);
+			this->label7->Size = System::Drawing::Size(20, 24);
 			this->label7->TabIndex = 7;
 			this->label7->Text = L"x";
 			// 
@@ -311,9 +368,10 @@ namespace Grupo02Karnagaugh {
 			this->label6->AutoSize = true;
 			this->label6->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 11.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label6->Location = System::Drawing::Point(160, 38);
+			this->label6->Location = System::Drawing::Point(213, 47);
+			this->label6->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->label6->Name = L"label6";
-			this->label6->Size = System::Drawing::Size(15, 18);
+			this->label6->Size = System::Drawing::Size(19, 24);
 			this->label6->TabIndex = 6;
 			this->label6->Text = L"y";
 			// 
@@ -322,9 +380,10 @@ namespace Grupo02Karnagaugh {
 			this->label5->AutoSize = true;
 			this->label5->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 11.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label5->Location = System::Drawing::Point(86, 38);
+			this->label5->Location = System::Drawing::Point(115, 47);
+			this->label5->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->label5->Name = L"label5";
-			this->label5->Size = System::Drawing::Size(18, 18);
+			this->label5->Size = System::Drawing::Size(23, 24);
 			this->label5->TabIndex = 5;
 			this->label5->Text = L"y\'";
 			// 
@@ -333,94 +392,73 @@ namespace Grupo02Karnagaugh {
 			this->label1->AutoSize = true;
 			this->label1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 11.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label1->Location = System::Drawing::Point(51, 61);
+			this->label1->Location = System::Drawing::Point(68, 75);
+			this->label1->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->label1->Name = L"label1";
-			this->label1->Size = System::Drawing::Size(18, 18);
+			this->label1->Size = System::Drawing::Size(24, 24);
 			this->label1->TabIndex = 4;
 			this->label1->Text = L"x\'";
 			// 
 			// textBox16
 			// 
 			this->textBox16->Enabled = false;
-			this->textBox16->Location = System::Drawing::Point(142, 85);
+			this->textBox16->Location = System::Drawing::Point(189, 105);
+			this->textBox16->Margin = System::Windows::Forms::Padding(4);
 			this->textBox16->Name = L"textBox16";
-			this->textBox16->Size = System::Drawing::Size(54, 20);
+			this->textBox16->Size = System::Drawing::Size(71, 29);
 			this->textBox16->TabIndex = 3;
 			// 
 			// textBox15
 			// 
 			this->textBox15->Enabled = false;
-			this->textBox15->Location = System::Drawing::Point(72, 85);
+			this->textBox15->Location = System::Drawing::Point(96, 105);
+			this->textBox15->Margin = System::Windows::Forms::Padding(4);
 			this->textBox15->Name = L"textBox15";
-			this->textBox15->Size = System::Drawing::Size(54, 20);
+			this->textBox15->Size = System::Drawing::Size(71, 29);
 			this->textBox15->TabIndex = 2;
 			// 
 			// textBox14
 			// 
 			this->textBox14->Enabled = false;
-			this->textBox14->Location = System::Drawing::Point(142, 59);
+			this->textBox14->Location = System::Drawing::Point(189, 73);
+			this->textBox14->Margin = System::Windows::Forms::Padding(4);
 			this->textBox14->Name = L"textBox14";
-			this->textBox14->Size = System::Drawing::Size(54, 20);
+			this->textBox14->Size = System::Drawing::Size(71, 29);
 			this->textBox14->TabIndex = 1;
 			// 
 			// textBox13
 			// 
 			this->textBox13->Enabled = false;
-			this->textBox13->Location = System::Drawing::Point(72, 59);
+			this->textBox13->Location = System::Drawing::Point(96, 73);
+			this->textBox13->Margin = System::Windows::Forms::Padding(4);
 			this->textBox13->Name = L"textBox13";
-			this->textBox13->Size = System::Drawing::Size(54, 20);
+			this->textBox13->Size = System::Drawing::Size(71, 29);
 			this->textBox13->TabIndex = 0;
 			// 
 			// button2
 			// 
-			this->button2->Location = System::Drawing::Point(636, 624);
+			this->button2->Location = System::Drawing::Point(848, 768);
+			this->button2->Margin = System::Windows::Forms::Padding(4);
 			this->button2->Name = L"button2";
-			this->button2->Size = System::Drawing::Size(99, 35);
+			this->button2->Size = System::Drawing::Size(132, 43);
 			this->button2->TabIndex = 9;
 			this->button2->Text = L"Volver";
 			this->button2->UseVisualStyleBackColor = true;
 			this->button2->Click += gcnew System::EventHandler(this, &Operacion::button2_Click);
 			// 
-			// comboBox2
-			// 
-			this->comboBox2->DropDownStyle = System::Windows::Forms::ComboBoxStyle::DropDownList;
-			this->comboBox2->FormattingEnabled = true;
-			this->comboBox2->Items->AddRange(gcnew cli::array< System::Object^  >(2) { L"0", L"1" });
-			this->comboBox2->Location = System::Drawing::Point(130, 84);
-			this->comboBox2->Name = L"comboBox2";
-			this->comboBox2->Size = System::Drawing::Size(31, 21);
-			this->comboBox2->TabIndex = 13;
-			// 
-			// comboBox3
-			// 
-			this->comboBox3->DropDownStyle = System::Windows::Forms::ComboBoxStyle::DropDownList;
-			this->comboBox3->FormattingEnabled = true;
-			this->comboBox3->Items->AddRange(gcnew cli::array< System::Object^  >(2) { L"0", L"1" });
-			this->comboBox3->Location = System::Drawing::Point(130, 110);
-			this->comboBox3->Name = L"comboBox3";
-			this->comboBox3->Size = System::Drawing::Size(31, 21);
-			this->comboBox3->TabIndex = 14;
-			// 
-			// comboBox4
-			// 
-			this->comboBox4->DropDownStyle = System::Windows::Forms::ComboBoxStyle::DropDownList;
-			this->comboBox4->FormattingEnabled = true;
-			this->comboBox4->Items->AddRange(gcnew cli::array< System::Object^  >(2) { L"0", L"1" });
-			this->comboBox4->Location = System::Drawing::Point(130, 136);
-			this->comboBox4->Name = L"comboBox4";
-			this->comboBox4->Size = System::Drawing::Size(31, 21);
-			this->comboBox4->TabIndex = 15;
-			// 
 			// Operacion
 			// 
-			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
+			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->BackColor = System::Drawing::SystemColors::Control;
-			this->ClientSize = System::Drawing::Size(747, 671);
+			this->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(224)), static_cast<System::Int32>(static_cast<System::Byte>(224)),
+				static_cast<System::Int32>(static_cast<System::Byte>(224)));
+			this->ClientSize = System::Drawing::Size(882, 653);
 			this->Controls->Add(this->button2);
 			this->Controls->Add(this->groupBox2);
 			this->Controls->Add(this->groupBox1);
+			this->Margin = System::Windows::Forms::Padding(4);
 			this->Name = L"Operacion";
+			this->StartPosition = System::Windows::Forms::FormStartPosition::CenterScreen;
 			this->Text = L"Operacion";
 			this->groupBox1->ResumeLayout(false);
 			this->groupBox1->PerformLayout();
@@ -442,6 +480,8 @@ private: System::Void button2_Click(System::Object^ sender, System::EventArgs^ e
 	this->Close();
 }
 private: System::Void textBox12_TextChanged(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void groupBox2_Enter(System::Object^ sender, System::EventArgs^ e) {
 }
 };
 }
