@@ -173,6 +173,8 @@ namespace Grupo02Karnagaugh {
 			// 
 			// groupBox1
 			// 
+			this->groupBox1->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(192)), static_cast<System::Int32>(static_cast<System::Byte>(255)),
+				static_cast<System::Int32>(static_cast<System::Byte>(255)));
 			this->groupBox1->Controls->Add(this->textBox17);
 			this->groupBox1->Controls->Add(this->textBox18);
 			this->groupBox1->Controls->Add(this->textBox19);
@@ -223,7 +225,7 @@ namespace Grupo02Karnagaugh {
 			this->textBox17->Name = L"textBox17";
 			this->textBox17->Size = System::Drawing::Size(36, 20);
 			this->textBox17->TabIndex = 52;
-			this->textBox17->Text = L"1";
+			this->textBox17->Text = L"0";
 			// 
 			// textBox18
 			// 
@@ -247,7 +249,7 @@ namespace Grupo02Karnagaugh {
 			this->textBox20->Name = L"textBox20";
 			this->textBox20->Size = System::Drawing::Size(36, 20);
 			this->textBox20->TabIndex = 49;
-			this->textBox20->Text = L"1";
+			this->textBox20->Text = L"0";
 			// 
 			// textBox21
 			// 
@@ -371,7 +373,7 @@ namespace Grupo02Karnagaugh {
 			this->textBox14->Name = L"textBox14";
 			this->textBox14->Size = System::Drawing::Size(36, 20);
 			this->textBox14->TabIndex = 35;
-			this->textBox14->Text = L"0";
+			this->textBox14->Text = L"1";
 			// 
 			// textBox15
 			// 
@@ -387,7 +389,7 @@ namespace Grupo02Karnagaugh {
 			this->textBox16->Name = L"textBox16";
 			this->textBox16->Size = System::Drawing::Size(36, 20);
 			this->textBox16->TabIndex = 33;
-			this->textBox16->Text = L"1";
+			this->textBox16->Text = L"0";
 			// 
 			// label5
 			// 
@@ -553,6 +555,8 @@ namespace Grupo02Karnagaugh {
 			// 
 			// groupBox2
 			// 
+			this->groupBox2->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(255)), static_cast<System::Int32>(static_cast<System::Byte>(192)),
+				static_cast<System::Int32>(static_cast<System::Byte>(192)));
 			this->groupBox2->Controls->Add(this->label12);
 			this->groupBox2->Controls->Add(this->label13);
 			this->groupBox2->Controls->Add(this->label14);

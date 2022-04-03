@@ -1,6 +1,7 @@
 #pragma once
 #include"Operacion.h"
 #include"Operacion3.h"
+#include"Operacion4.h"
 namespace Grupo02Karnagaugh {
 
 	using namespace System;
@@ -39,6 +40,7 @@ namespace Grupo02Karnagaugh {
 	private: System::Windows::Forms::Button^ button1;
 	private: System::Windows::Forms::Label^ label2;
 	private: System::Windows::Forms::ComboBox^ comboBox1;
+	private: System::Windows::Forms::Button^ button2;
 	protected:
 
 	private:
@@ -58,6 +60,7 @@ namespace Grupo02Karnagaugh {
 			this->button1 = (gcnew System::Windows::Forms::Button());
 			this->label2 = (gcnew System::Windows::Forms::Label());
 			this->comboBox1 = (gcnew System::Windows::Forms::ComboBox());
+			this->button2 = (gcnew System::Windows::Forms::Button());
 			this->SuspendLayout();
 			// 
 			// label1
@@ -99,11 +102,22 @@ namespace Grupo02Karnagaugh {
 			this->comboBox1->Size = System::Drawing::Size(121, 21);
 			this->comboBox1->TabIndex = 3;
 			// 
+			// button2
+			// 
+			this->button2->Location = System::Drawing::Point(440, 469);
+			this->button2->Name = L"button2";
+			this->button2->Size = System::Drawing::Size(99, 35);
+			this->button2->TabIndex = 4;
+			this->button2->Text = L"Cerrar";
+			this->button2->UseVisualStyleBackColor = true;
+			this->button2->Click += gcnew System::EventHandler(this, &FrmMain::button2_Click);
+			// 
 			// FrmMain
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->ClientSize = System::Drawing::Size(551, 516);
+			this->Controls->Add(this->button2);
 			this->Controls->Add(this->comboBox1);
 			this->Controls->Add(this->label2);
 			this->Controls->Add(this->button1);
@@ -124,7 +138,14 @@ namespace Grupo02Karnagaugh {
 			Operacion3^ op3 = gcnew Operacion3();
 			op3->Show();
 		}
+		if (comboBox1->Text == "4"){
+			Operacion4^ op4 = gcnew Operacion4();
+			op4->Show();
+		}
 	}
 	
-	};
+	private: System::Void button2_Click(System::Object^ sender, System::EventArgs^ e) {
+		this->Close();
+	}
+};
 }

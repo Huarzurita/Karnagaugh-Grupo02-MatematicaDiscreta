@@ -92,6 +92,8 @@
     </ClCompile>
     <Link>
       <AdditionalDependencies />
+      <SubSystem>Windows</SubSystem>
+      <EntryPointSymbol>main</EntryPointSymbol>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -124,6 +126,7 @@
     <ClCompile Include="FrmMain.cpp" />
     <ClCompile Include="Operacion.cpp" />
     <ClCompile Include="Operacion3.cpp" />
+    <ClCompile Include="Operacion4.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="FrmMain.h">
@@ -133,6 +136,9 @@
       <FileType>CppForm</FileType>
     </ClInclude>
     <ClInclude Include="Operacion3.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="Operacion4.h">
       <FileType>CppForm</FileType>
     </ClInclude>
   </ItemGroup>
@@ -145,6 +151,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Operacion3.resx">
       <DependentUpon>Operacion3.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Operacion4.resx">
+      <DependentUpon>Operacion4.h</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
