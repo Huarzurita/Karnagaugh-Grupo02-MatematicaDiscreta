@@ -1,5 +1,9 @@
 ﻿  FrmMain.cpp
+C:\Users\User\Desktop\Karnagaugh-Grupo02-MatematicaDiscreta\Grupo02_Karnagaugh\Grupo02_Karnagaugh\Dibujarmapa.h(25,1): warning C4554: "&": compruebe la prioridad de operador para posibles errores; utilice paréntesis para indicar la prioridad
+C:\Users\User\Desktop\Karnagaugh-Grupo02-MatematicaDiscreta\Grupo02_Karnagaugh\Grupo02_Karnagaugh\Dibujarmapa.h(28,1): warning C4554: "&": compruebe la prioridad de operador para posibles errores; utilice paréntesis para indicar la prioridad
   Operacion.cpp
+C:\Users\User\Desktop\Karnagaugh-Grupo02-MatematicaDiscreta\Grupo02_Karnagaugh\Grupo02_Karnagaugh\Dibujarmapa.h(25,1): warning C4554: "&": compruebe la prioridad de operador para posibles errores; utilice paréntesis para indicar la prioridad
+C:\Users\User\Desktop\Karnagaugh-Grupo02-MatematicaDiscreta\Grupo02_Karnagaugh\Grupo02_Karnagaugh\Dibujarmapa.h(28,1): warning C4554: "&": compruebe la prioridad de operador para posibles errores; utilice paréntesis para indicar la prioridad
   Generando código...
   FrmMain.obj : se encontró un módulo MSIL; vinculación incremental deshabilitada para MSIL; ejecutando vínculo completo
-  Grupo02_Karnagaugh.vcxproj -> C:\Users\LUCERO Y ALONSO\Desktop\TODO\Karnagaugh-Grupo02-MatematicaDiscreta\Grupo02_Karnagaugh\x64\Debug\Grupo02_Karnagaugh.exe
+  Grupo02_Karnagaugh.vcxproj -> C:\Users\User\Desktop\Karnagaugh-Grupo02-MatematicaDiscreta\Grupo02_Karnagaugh\x64\Debug\Grupo02_Karnagaugh.exe
