@@ -129,6 +129,7 @@
     <ClCompile Include="Operacion4.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Dibujarmapa.h" />
     <ClInclude Include="FrmMain.h">
       <FileType>CppForm</FileType>
     </ClInclude>

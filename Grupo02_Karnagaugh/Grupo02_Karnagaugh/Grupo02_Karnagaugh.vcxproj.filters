@@ -41,7 +41,7 @@
     <ClInclude Include="Operacion4.h">
       <Filter>Archivos de encabezado</Filter>
     </ClInclude>
-    <ClInclude Include="MapaDeKarnaugh.h">
+    <ClInclude Include="Dibujarmapa.h">
       <Filter>Archivos de encabezado</Filter>
     </ClInclude>
   </ItemGroup>
