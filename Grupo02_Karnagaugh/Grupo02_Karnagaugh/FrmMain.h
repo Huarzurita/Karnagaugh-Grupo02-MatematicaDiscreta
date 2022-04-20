@@ -146,19 +146,22 @@ namespace Grupo02Karnagaugh {
 		delete g;
 	}
 	private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
+		Operacion^ op = gcnew Operacion();
+		Operacion3^ op3 = gcnew Operacion3();
+		Operacion4^ op4 = gcnew Operacion4();
 		if (comboBox1->Text == "2") {
-			Operacion^ op = gcnew Operacion();
-			op->Show();
+			op->ShowDialog();
 		}
 		if (comboBox1->Text == "3") {
-			Operacion3^ op3 = gcnew Operacion3();
-			op3->Show();
+			op3->ShowDialog();
+
 		}
 		if (comboBox1->Text == "4"){
-			Operacion4^ op4 = gcnew Operacion4();
-			op4->Show();
+			op4->ShowDialog();
 		}
-		
+		delete op;
+		delete op3;
+		delete op4;
 	}
 	
 	private: System::Void button2_Click(System::Object^ sender, System::EventArgs^ e) {

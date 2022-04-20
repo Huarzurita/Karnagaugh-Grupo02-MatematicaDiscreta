@@ -1,5 +1,7 @@
 #pragma once
-
+#include "MapaDeKarnaugh.h"
+#include "iostream"
+#include "string"
 namespace Grupo02Karnagaugh {
 
 	using namespace System;
@@ -14,13 +16,13 @@ namespace Grupo02Karnagaugh {
 	/// </summary>
 	public ref class Operacion : public System::Windows::Forms::Form
 	{
+	private:
+		MapaDeKarnaugh* m;
 	public:
 		Operacion(void)
 		{
 			InitializeComponent();
-			//
-			//TODO: agregar código de constructor aquí
-			//
+			m = new MapaDeKarnaugh();
 		}
 
 	protected:
@@ -34,7 +36,6 @@ namespace Grupo02Karnagaugh {
 				delete components;
 			}
 		}
-
 	protected:
 	private: System::Windows::Forms::Label^ label2;
 	private: System::Windows::Forms::Label^ label3;
@@ -67,7 +68,13 @@ namespace Grupo02Karnagaugh {
 	private: System::Windows::Forms::ComboBox^ comboBox3;
 	private: System::Windows::Forms::ComboBox^ comboBox2;
 	private: System::Windows::Forms::ComboBox^ comboBox1;
-
+	private: System::Windows::Forms::Label^ lblgrupo;
+	private: System::Windows::Forms::Label^ lblfuncion;
+	private: System::Windows::Forms::Label^ lblfsimplificada;
+	private: System::Windows::Forms::Label^ lblf3;
+	private: System::Windows::Forms::Label^ lblf2;
+	private: System::Windows::Forms::Label^ lblf1;
+	private: System::Windows::Forms::Label^ lblf0;
 
 
 
@@ -111,6 +118,10 @@ namespace Grupo02Karnagaugh {
 			this->comboBox2 = (gcnew System::Windows::Forms::ComboBox());
 			this->comboBox1 = (gcnew System::Windows::Forms::ComboBox());
 			this->groupBox2 = (gcnew System::Windows::Forms::GroupBox());
+			this->lblf3 = (gcnew System::Windows::Forms::Label());
+			this->lblf2 = (gcnew System::Windows::Forms::Label());
+			this->lblf1 = (gcnew System::Windows::Forms::Label());
+			this->lblf0 = (gcnew System::Windows::Forms::Label());
 			this->button1 = (gcnew System::Windows::Forms::Button());
 			this->label7 = (gcnew System::Windows::Forms::Label());
 			this->label6 = (gcnew System::Windows::Forms::Label());
@@ -121,6 +132,9 @@ namespace Grupo02Karnagaugh {
 			this->textBox14 = (gcnew System::Windows::Forms::TextBox());
 			this->textBox13 = (gcnew System::Windows::Forms::TextBox());
 			this->button2 = (gcnew System::Windows::Forms::Button());
+			this->lblgrupo = (gcnew System::Windows::Forms::Label());
+			this->lblfuncion = (gcnew System::Windows::Forms::Label());
+			this->lblfsimplificada = (gcnew System::Windows::Forms::Label());
 			this->groupBox1->SuspendLayout();
 			this->groupBox2->SuspendLayout();
 			this->SuspendLayout();
@@ -318,6 +332,10 @@ namespace Grupo02Karnagaugh {
 			// groupBox2
 			// 
 			this->groupBox2->BackColor = System::Drawing::Color::LightGreen;
+			this->groupBox2->Controls->Add(this->lblf3);
+			this->groupBox2->Controls->Add(this->lblf2);
+			this->groupBox2->Controls->Add(this->lblf1);
+			this->groupBox2->Controls->Add(this->lblf0);
 			this->groupBox2->Controls->Add(this->button1);
 			this->groupBox2->Controls->Add(this->label7);
 			this->groupBox2->Controls->Add(this->label6);
@@ -337,7 +355,50 @@ namespace Grupo02Karnagaugh {
 			this->groupBox2->TabIndex = 17;
 			this->groupBox2->TabStop = false;
 			this->groupBox2->Text = L"Mapa de Karnaugh ";
-			this->groupBox2->Enter += gcnew System::EventHandler(this, &Operacion::groupBox2_Enter);
+			// 
+			// lblf3
+			// 
+			this->lblf3->AutoSize = true;
+			this->lblf3->BackColor = System::Drawing::SystemColors::ControlLightLight;
+			this->lblf3->ForeColor = System::Drawing::Color::Red;
+			this->lblf3->Location = System::Drawing::Point(239, 108);
+			this->lblf3->Name = L"lblf3";
+			this->lblf3->Size = System::Drawing::Size(23, 22);
+			this->lblf3->TabIndex = 12;
+			this->lblf3->Text = L"3";
+			// 
+			// lblf2
+			// 
+			this->lblf2->AutoSize = true;
+			this->lblf2->BackColor = System::Drawing::SystemColors::ControlLightLight;
+			this->lblf2->ForeColor = System::Drawing::Color::Red;
+			this->lblf2->Location = System::Drawing::Point(148, 108);
+			this->lblf2->Name = L"lblf2";
+			this->lblf2->Size = System::Drawing::Size(23, 22);
+			this->lblf2->TabIndex = 11;
+			this->lblf2->Text = L"2";
+			// 
+			// lblf1
+			// 
+			this->lblf1->AutoSize = true;
+			this->lblf1->BackColor = System::Drawing::SystemColors::ControlLightLight;
+			this->lblf1->ForeColor = System::Drawing::Color::Red;
+			this->lblf1->Location = System::Drawing::Point(239, 76);
+			this->lblf1->Name = L"lblf1";
+			this->lblf1->Size = System::Drawing::Size(22, 22);
+			this->lblf1->TabIndex = 10;
+			this->lblf1->Text = L"1";
+			// 
+			// lblf0
+			// 
+			this->lblf0->AutoSize = true;
+			this->lblf0->BackColor = System::Drawing::SystemColors::ControlLightLight;
+			this->lblf0->ForeColor = System::Drawing::Color::Red;
+			this->lblf0->Location = System::Drawing::Point(147, 76);
+			this->lblf0->Name = L"lblf0";
+			this->lblf0->Size = System::Drawing::Size(23, 22);
+			this->lblf0->TabIndex = 9;
+			this->lblf0->Text = L"0";
 			// 
 			// button1
 			// 
@@ -446,6 +507,42 @@ namespace Grupo02Karnagaugh {
 			this->button2->UseVisualStyleBackColor = true;
 			this->button2->Click += gcnew System::EventHandler(this, &Operacion::button2_Click);
 			// 
+			// lblgrupo
+			// 
+			this->lblgrupo->AutoSize = true;
+			this->lblgrupo->Font = (gcnew System::Drawing::Font(L"Bookman Old Style", 13.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->lblgrupo->Location = System::Drawing::Point(56, 392);
+			this->lblgrupo->Name = L"lblgrupo";
+			this->lblgrupo->Size = System::Drawing::Size(89, 28);
+			this->lblgrupo->TabIndex = 18;
+			this->lblgrupo->Text = L"Grupo";
+			this->lblgrupo->Visible = false;
+			// 
+			// lblfuncion
+			// 
+			this->lblfuncion->AutoSize = true;
+			this->lblfuncion->Font = (gcnew System::Drawing::Font(L"Bookman Old Style", 13.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->lblfuncion->Location = System::Drawing::Point(368, 544);
+			this->lblfuncion->Name = L"lblfuncion";
+			this->lblfuncion->Size = System::Drawing::Size(114, 28);
+			this->lblfuncion->TabIndex = 19;
+			this->lblfuncion->Text = L"Funcion";
+			this->lblfuncion->Visible = false;
+			// 
+			// lblfsimplificada
+			// 
+			this->lblfsimplificada->AutoSize = true;
+			this->lblfsimplificada->Font = (gcnew System::Drawing::Font(L"Bookman Old Style", 13.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->lblfsimplificada->Location = System::Drawing::Point(56, 544);
+			this->lblfsimplificada->Name = L"lblfsimplificada";
+			this->lblfsimplificada->Size = System::Drawing::Size(283, 28);
+			this->lblfsimplificada->TabIndex = 20;
+			this->lblfsimplificada->Text = L"Funcion simplificada:";
+			this->lblfsimplificada->Visible = false;
+			// 
 			// Operacion
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
@@ -453,6 +550,9 @@ namespace Grupo02Karnagaugh {
 			this->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(224)), static_cast<System::Int32>(static_cast<System::Byte>(224)),
 				static_cast<System::Int32>(static_cast<System::Byte>(224)));
 			this->ClientSize = System::Drawing::Size(882, 653);
+			this->Controls->Add(this->lblfsimplificada);
+			this->Controls->Add(this->lblfuncion);
+			this->Controls->Add(this->lblgrupo);
 			this->Controls->Add(this->button2);
 			this->Controls->Add(this->groupBox2);
 			this->Controls->Add(this->groupBox1);
@@ -465,23 +565,139 @@ namespace Grupo02Karnagaugh {
 			this->groupBox2->ResumeLayout(false);
 			this->groupBox2->PerformLayout();
 			this->ResumeLayout(false);
+			this->PerformLayout();
 
 		}
 #pragma endregion
-	private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
+	private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) { //Boton Calcular
+		//Labels
+		this->lblgrupo->Text = "";
+		this->lblfuncion->Text = "";
+		this->lblgrupo->Visible = false;
+		this->lblfsimplificada->Visible = false;
+		this->lblfuncion->Visible = false;
+
+		//A partir de la tabla de verdad
 		this->textBox13->Text = this->comboBox1->Text;
 		this->textBox14->Text = this->comboBox2->Text;
 		this->textBox15->Text = this->comboBox3->Text;
 		this->textBox16->Text = this->comboBox4->Text;
 
-		
+		//crear matriz
+		int** matriz;
+		matriz = new int* [2];
+		for (int i = 0; i < 2; i++) {
+			matriz[i] = new int[2];
+		};
+		m->setcantidad1(0);
+		//guardar datos en la matriz
+		if (this->textBox13->Text == "" || this->textBox14->Text == "" || this->textBox15->Text == "" || this->textBox16->Text == "") {
+			this->lblgrupo->Text = "Error, coloca todos los datos";
+			this->lblgrupo->Visible = true;
+		}
+		else {
+			matriz[0][0] = Convert::ToInt32(this->comboBox1->Text);
+			matriz[0][1] = Convert::ToInt32(this->comboBox2->Text);
+			matriz[1][0] = Convert::ToInt32(this->comboBox3->Text);
+			matriz[1][1] = Convert::ToInt32(this->comboBox4->Text);
+			m->setmatriz(matriz);
+			m->generarMatrizPosicion();
+			agrupar();
+			this->lblgrupo->Visible = true;
+			this->lblfsimplificada->Visible = true;
+			this->lblfuncion->Visible = true;
+		}
 	}
+
+public: void agrupar() {
+	m->calcularCantidad1();
+	switch (m->getcantidad1()) {
+	case 4:
+		this->lblgrupo->Text = "Grupo de 4: ";
+		this->lblgrupo->Text += m->getmposicion()[0][0] + ", " + m->getmposicion()[0][1] + ", " + m->getmposicion()[1][0] + ", " + m->getmposicion()[1][1];
+		this->lblfuncion->Text = "1";
+		break;
+	case 3:
+		this->lblgrupo->Text = "Grupo de 2: ";
+		if (m->getmatriz()[0][0] == 0) {
+			this->lblgrupo->Text += m->getmposicion()[0][1] + ", " + m->getmposicion()[1][1];
+			this->lblgrupo->Text += "\nGrupo de 2: " + m->getmposicion()[1][0] + ", " + m->getmposicion()[1][1];
+			this->lblfuncion->Text = "X + Y";
+		}
+		else if (m->getmatriz()[0][1] == 0) {
+			this->lblgrupo->Text += m->getmposicion()[0][0] + ", " + m->getmposicion()[1][0];
+			this->lblgrupo->Text += "\nGrupo de 2: " + m->getmposicion()[1][0] + ", " + m->getmposicion()[1][1];
+			this->lblfuncion->Text = "X + Y'";
+		}
+		else if (m->getmatriz()[1][0] == 0) {
+			this->lblgrupo->Text += m->getmposicion()[0][0] + ", " + m->getmposicion()[0][1];
+			this->lblgrupo->Text += "\nGrupo de 2: " + m->getmposicion()[0][1] + ", " + m->getmposicion()[1][1];
+			this->lblfuncion->Text = "X' + Y";
+		}
+		else if (m->getmatriz()[1][1] == 0) {
+			this->lblgrupo->Text += m->getmposicion()[0][0] + ", " + m->getmposicion()[0][1];
+			this->lblgrupo->Text += "\nGrupo de 2: " + m->getmposicion()[0][0] + ", " + m->getmposicion()[1][0];
+			this->lblfuncion->Text = "X' + Y'";
+		}
+		break;
+	case 2:
+		if (m->getmatriz()[0][0] == 1 && m->getmatriz()[0][1] == 1) {
+			this->lblgrupo->Text = "Grupo de 2: " + m->getmposicion()[0][0] + ", " + m->getmposicion()[0][1];
+			this->lblfuncion->Text = "X'";
+		}
+		else if (m->getmatriz()[0][1] == 1 && m->getmatriz()[1][1] == 1) {
+			this->lblgrupo->Text = "Grupo de 2: " + m->getmposicion()[0][1] + ", " + m->getmposicion()[1][1];
+			this->lblfuncion->Text = "Y";
+		}
+		else if (m->getmatriz()[1][1] == 1 && m->getmatriz()[1][0] == 1) {
+			this->lblgrupo->Text = "Grupo de 2: " + m->getmposicion()[1][1] + ", " + m->getmposicion()[1][0];
+			this->lblfuncion->Text = "X";
+		}
+		else if (m->getmatriz()[0][0] == 1 && m->getmatriz()[1][0] == 1) {
+			this->lblgrupo->Text = "Grupo de 2: " + m->getmposicion()[0][0] + ", " + m->getmposicion()[1][0];
+			this->lblfuncion->Text = "Y'";
+		}
+		//Diagonal
+		else if (m->getmatriz()[0][0] == 1 && m->getmatriz()[1][1] == 1) {
+			this->lblgrupo->Text = "Grupo de 1: " + m->getmposicion()[0][0];
+			this->lblgrupo->Text += "\nGrupo de 1: " + m->getmposicion()[1][1];
+			this->lblfuncion->Text = "X'Y' + XY";
+		}
+		else if (m->getmatriz()[0][1] == 1 && m->getmatriz()[1][0] == 1) {
+			this->lblgrupo->Text = "Grupo de 1: " + m->getmposicion()[0][1];
+			this->lblgrupo->Text += "\nGrupo de 1: " + m->getmposicion()[1][0];
+			this->lblfuncion->Text = "X'Y + XY'";
+		}
+		break;
+	case 1:
+		this->lblgrupo->Text = "Grupo de 1: ";
+		if (m->getmatriz()[0][0] == 1) {
+			this->lblgrupo->Text += m->getmposicion()[0][0];
+			this->lblfuncion->Text = "X'Y'";
+		}
+		else if (m->getmatriz()[0][1] == 1) {
+			this->lblgrupo->Text += m->getmposicion()[0][1];
+			this->lblfuncion->Text = "X'Y";
+		}
+		else if (m->getmatriz()[1][0] == 1) {
+			this->lblgrupo->Text += m->getmposicion()[1][0];
+			this->lblfuncion->Text = "XY'";
+		}
+		else if (m->getmatriz()[1][1] == 1) {
+			this->lblgrupo->Text += m->getmposicion()[1][1];
+			this->lblfuncion->Text = "XY";
+		}
+		break;
+	case 0:
+		this->lblgrupo->Text = "No hay grupos";
+		this->lblfuncion->Text = "0";
+		break;
+	}
+}
 private: System::Void button2_Click(System::Object^ sender, System::EventArgs^ e) {
 	this->Close();
 }
 private: System::Void textBox12_TextChanged(System::Object^ sender, System::EventArgs^ e) {
-}
-private: System::Void groupBox2_Enter(System::Object^ sender, System::EventArgs^ e) {
 }
 };
 }

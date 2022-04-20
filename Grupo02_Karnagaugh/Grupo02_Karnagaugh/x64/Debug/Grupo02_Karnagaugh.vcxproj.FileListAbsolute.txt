@@ -15,3 +15,4 @@ C:\Users\LUCERO Y ALONSO\Desktop\TODO\Karnagaugh-Grupo02-MatematicaDiscreta\Grup
 C:\Users\LUCERO Y ALONSO\Desktop\TODO\Karnagaugh-Grupo02-MatematicaDiscreta\Grupo02_Karnagaugh\Grupo02_Karnagaugh\x64\Debug\Grupo02Karnagaugh.Operacion3.resources
 C:\Users\LUCERO Y ALONSO\Desktop\TODO\Karnagaugh-Grupo02-MatematicaDiscreta\Grupo02_Karnagaugh\Grupo02_Karnagaugh\x64\Debug\Grupo02Karnagaugh.Operacion4.resources
 C:\Users\LUCERO Y ALONSO\Desktop\TODO\Karnagaugh-Grupo02-MatematicaDiscreta\Grupo02_Karnagaugh\Grupo02_Karnagaugh\x64\Debug\Grupo02_Karnagaugh.vcxproj.GenerateResource.cache
+C:\Users\LUCERO Y ALONSO\Desktop\TODO\Karnagaugh-Grupo02-MatematicaDiscreta\Grupo02_Karnagaugh\Grupo02_Karnagaugh\x64\Debug\Grupo02_Karnagaugh.vcxproj.AssemblyReference.cache

@@ -132,6 +132,7 @@
     <ClInclude Include="FrmMain.h">
       <FileType>CppForm</FileType>
     </ClInclude>
+    <ClInclude Include="MapaDeKarnaugh.h" />
     <ClInclude Include="Operacion.h">
       <FileType>CppForm</FileType>
     </ClInclude>
