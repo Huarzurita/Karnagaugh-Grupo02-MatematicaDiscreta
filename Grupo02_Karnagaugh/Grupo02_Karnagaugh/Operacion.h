@@ -610,7 +610,6 @@ namespace Grupo02Karnagaugh {
 		this->textBox15->Text = this->comboBox3->Text;
 		this->textBox16->Text = this->comboBox4->Text;
 
-
 		k = new Karnaugh(Convert::ToInt32(comboBox1->Text), Convert::ToInt32(comboBox2->Text), Convert::ToInt32(comboBox3->Text), Convert::ToInt32(comboBox4->Text));
 		k->dibujarcuadrado(g);
 		labelmapa->Text = this->comboBox1->Text + "   " + this->comboBox2->Text +"\n\n"+ this->comboBox3->Text + "   " + this->comboBox4->Text;
@@ -633,15 +632,16 @@ namespace Grupo02Karnagaugh {
 			matriz[1][0] = Convert::ToInt32(this->comboBox3->Text);
 			matriz[1][1] = Convert::ToInt32(this->comboBox4->Text);
 			m->setmatriz(matriz);
-			m->generarMatrizPosicion();
+			m->generarMatrizPF();
 			agrupar();
 			this->lblgrupo->Visible = true;
 			this->lblfsimplificada->Visible = true;
 			this->lblfuncion->Visible = true;
 		}
 	}
-	public: void agrupar() {
+	private: void agrupar() {
 		m->calcularCantidad1();
+		bool band = false;
 		switch (m->getcantidad1()) {
 		case 4:
 			this->lblgrupo->Text = "Grupo de 4: ";
@@ -649,74 +649,63 @@ namespace Grupo02Karnagaugh {
 			this->lblfuncion->Text = "1";
 			break;
 		case 3:
-			this->lblgrupo->Text = "Grupo de 2: ";
-			if (m->getmatriz()[0][0] == 0) {
-				this->lblgrupo->Text += m->getmposicion()[0][1] + ", " + m->getmposicion()[1][1];
-				this->lblgrupo->Text += "\nGrupo de 2: " + m->getmposicion()[1][0] + ", " + m->getmposicion()[1][1];
-				this->lblfuncion->Text = "X + Y";
-			}
-			else if (m->getmatriz()[0][1] == 0) {
-				this->lblgrupo->Text += m->getmposicion()[0][0] + ", " + m->getmposicion()[1][0];
-				this->lblgrupo->Text += "\nGrupo de 2: " + m->getmposicion()[1][0] + ", " + m->getmposicion()[1][1];
-				this->lblfuncion->Text = "X + Y'";
-			}
-			else if (m->getmatriz()[1][0] == 0) {
-				this->lblgrupo->Text += m->getmposicion()[0][0] + ", " + m->getmposicion()[0][1];
-				this->lblgrupo->Text += "\nGrupo de 2: " + m->getmposicion()[0][1] + ", " + m->getmposicion()[1][1];
-				this->lblfuncion->Text = "X' + Y";
-			}
-			else if (m->getmatriz()[1][1] == 0) {
-				this->lblgrupo->Text += m->getmposicion()[0][0] + ", " + m->getmposicion()[0][1];
-				this->lblgrupo->Text += "\nGrupo de 2: " + m->getmposicion()[0][0] + ", " + m->getmposicion()[1][0];
-				this->lblfuncion->Text = "X' + Y'";
+			for (int i = 0; i < 2; i++) {
+				for (int j = 0; j < 2; j++) {
+					//horizontal
+					if ((j < 1) && (m->getmatriz()[i][j] == 1) && (m->getmatriz()[i][j+1] == 1)) {
+						this->lblgrupo->Text += "\nGrupo de 2: " + m->getmposicion()[i][j] + ", " + m->getmposicion()[i][j+1];
+						if (i == 0)this->lblfuncion->Text += "X'";
+						if (i == 1)this->lblfuncion->Text += "X";
+						if (!band) { this->lblfuncion->Text += " + "; band = true; }
+					}
+					//vertical
+					if ((i < 1) && (m->getmatriz()[i][j] == 1) && (m->getmatriz()[i+1][j] == 1)) {
+						this->lblgrupo->Text += "\nGrupo de 2: " + m->getmposicion()[i][j] + ", " + m->getmposicion()[i+1][j];
+						if (j == 0)this->lblfuncion->Text += "Y'";
+						if (j == 1)this->lblfuncion->Text += "Y";
+						if (!band) { this->lblfuncion->Text += " + "; band = true; }
+					}
+				}
 			}
 			break;
 		case 2:
-			if (m->getmatriz()[0][0] == 1 && m->getmatriz()[0][1] == 1) {
-				this->lblgrupo->Text = "Grupo de 2: " + m->getmposicion()[0][0] + ", " + m->getmposicion()[0][1];
-				this->lblfuncion->Text = "X'";
-			}
-			else if (m->getmatriz()[0][1] == 1 && m->getmatriz()[1][1] == 1) {
-				this->lblgrupo->Text = "Grupo de 2: " + m->getmposicion()[0][1] + ", " + m->getmposicion()[1][1];
-				this->lblfuncion->Text = "Y";
-			}
-			else if (m->getmatriz()[1][1] == 1 && m->getmatriz()[1][0] == 1) {
-				this->lblgrupo->Text = "Grupo de 2: " + m->getmposicion()[1][1] + ", " + m->getmposicion()[1][0];
-				this->lblfuncion->Text = "X";
-			}
-			else if (m->getmatriz()[0][0] == 1 && m->getmatriz()[1][0] == 1) {
-				this->lblgrupo->Text = "Grupo de 2: " + m->getmposicion()[0][0] + ", " + m->getmposicion()[1][0];
-				this->lblfuncion->Text = "Y'";
-			}
-			//Diagonal
-			else if (m->getmatriz()[0][0] == 1 && m->getmatriz()[1][1] == 1) {
-				this->lblgrupo->Text = "Grupo de 1: " + m->getmposicion()[0][0];
-				this->lblgrupo->Text += "\nGrupo de 1: " + m->getmposicion()[1][1];
-				this->lblfuncion->Text = "X'Y' + XY";
-			}
-			else if (m->getmatriz()[0][1] == 1 && m->getmatriz()[1][0] == 1) {
-				this->lblgrupo->Text = "Grupo de 1: " + m->getmposicion()[0][1];
-				this->lblgrupo->Text += "\nGrupo de 1: " + m->getmposicion()[1][0];
-				this->lblfuncion->Text = "X'Y + XY'";
+			for (int i = 0; i < 2; i++) {
+				for (int j = 0; j < 2; j++) {
+					//horizontal
+					if ((j < 1) && (m->getmatriz()[i][j] == 1) && (m->getmatriz()[i][j + 1] == 1)) {
+						this->lblgrupo->Text += "\nGrupo de 2: " + m->getmposicion()[i][j] + ", " + m->getmposicion()[i][j + 1];
+						if (i == 0)this->lblfuncion->Text += "X'";
+						if (i == 1)this->lblfuncion->Text += "X";
+					}
+					//vertical
+					if ((i < 1) && (m->getmatriz()[i][j] == 1) && (m->getmatriz()[i + 1][j] == 1)) {
+						this->lblgrupo->Text += "\nGrupo de 2: " + m->getmposicion()[i][j] + ", " + m->getmposicion()[i + 1][j];
+						if (j == 0)this->lblfuncion->Text += "Y'";
+						if (j == 1)this->lblfuncion->Text += "Y";
+					}
+					//diagonales
+					if ((i < 1) && (j > 0) && (m->getmatriz()[i + 1][j] == 1) && (m->getmatriz()[i][j - 1] == 1)) {
+						this->lblgrupo->Text += "\nGrupo de 2: " + m->getmposicion()[i + 1][j] + ", " + m->getmposicion()[i][j - 1];
+						this->lblfuncion->Text = "X'Y' + XY";
+					}
+					if ((i < 1) && (j < 1) && (m->getmatriz()[i + 1][j] == 1) && (m->getmatriz()[i][j + 1] == 1)) {
+						this->lblgrupo->Text += "\nGrupo de 2: " + m->getmposicion()[i + 1][j] + ", " + m->getmposicion()[i][j + 1];
+						this->lblfuncion->Text = "X'Y + XY'";
+					}
+				}
 			}
 			break;
 		case 1:
-			this->lblgrupo->Text = "Grupo de 1: ";
-			if (m->getmatriz()[0][0] == 1) {
-				this->lblgrupo->Text += m->getmposicion()[0][0];
-				this->lblfuncion->Text = "X'Y'";
-			}
-			else if (m->getmatriz()[0][1] == 1) {
-				this->lblgrupo->Text += m->getmposicion()[0][1];
-				this->lblfuncion->Text = "X'Y";
-			}
-			else if (m->getmatriz()[1][0] == 1) {
-				this->lblgrupo->Text += m->getmposicion()[1][0];
-				this->lblfuncion->Text = "XY'";
-			}
-			else if (m->getmatriz()[1][1] == 1) {
-				this->lblgrupo->Text += m->getmposicion()[1][1];
-				this->lblfuncion->Text = "XY";
+			for (int i = 0; i < 2; i++) {
+				for (int j = 0; j < 2; j++) {
+					if (m->getmatriz()[i][j]==1) {
+						this->lblgrupo->Text += "\nGrupo de 1: " + m->getmposicion()[i][j];
+						if(m->getmposicion()[i][j]==0)this->lblfuncion->Text += "X'Y'";
+						if(m->getmposicion()[i][j]==1)this->lblfuncion->Text += "X'Y";
+						if(m->getmposicion()[i][j]==2)this->lblfuncion->Text += "XY'";
+						if(m->getmposicion()[i][j]==3)this->lblfuncion->Text += "XY";
+					}
+				}
 			}
 			break;
 		case 0:

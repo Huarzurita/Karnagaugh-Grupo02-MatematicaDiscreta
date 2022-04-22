@@ -5,6 +5,7 @@ class MapaDeKarnaugh {
 private:
 	int** matriz;
 	int** mposicion;
+	int** mfuncion;
 	int cantidad1;
 public:
 	MapaDeKarnaugh() {
@@ -17,6 +18,11 @@ public:
 		for (int i = 0; i < 2; i++) {
 			mposicion[i] = new int[2];
 		};
+
+		mposicion = new int* [4];
+		for (int i = 0; i < 2; i++) {
+			mposicion[i] = new int[4];
+		};
 		cantidad1 = 0;
 	}
 	~MapaDeKarnaugh() {}
@@ -27,11 +33,12 @@ public:
 	void setmatriz(int** matriz) { this->matriz = matriz; }
 	void setcantidad1(int cantidad1) { this->cantidad1 = cantidad1; }
 
-	void generarMatrizPosicion() {
-		mposicion[0][0] = 0;
-		mposicion[0][1] = 1;
-		mposicion[1][0] = 2;
-		mposicion[1][1] = 3;
+	void generarMatrizPF() {
+		//Matriz que guarda posiciones y sirve para identificar la funcion
+		mposicion[0][0] = 0; //X'Y'
+		mposicion[0][1] = 1; //X'Y
+		mposicion[1][0] = 2; //XY'
+		mposicion[1][1] = 3; //XY
 	}
 
 	void calcularCantidad1() {

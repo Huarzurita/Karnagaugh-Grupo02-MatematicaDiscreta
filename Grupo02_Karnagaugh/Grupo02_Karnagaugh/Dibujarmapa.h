@@ -22,10 +22,10 @@ public:
 
 	void dibujarcuadrado(Graphics^ g) {
 		Pen^ p = gcnew Pen(Color::Blue, 3);
-		if (a == 1 & b==1&c==1&d==1) {
+		if (a == 1 && b==1 && c==1 && d==1) {
 			g->DrawRectangle(p, 2, 2, 65, 65);
 		}
-		if (a == 1 & b == 1 ) {
+		if (a == 1 && b == 1 ) {
 			g->DrawRectangle(p, 2, 2, 65, 32);
 		}
 	}
