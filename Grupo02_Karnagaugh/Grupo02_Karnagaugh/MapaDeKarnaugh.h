@@ -35,10 +35,10 @@ public:
 
 	void generarMatrizPF() {
 		//Matriz que guarda posiciones y sirve para identificar la funcion
-		mposicion[0][0] = 0; //X'Y'
-		mposicion[0][1] = 1; //X'Y
-		mposicion[1][0] = 2; //XY'
-		mposicion[1][1] = 3; //XY
+		mposicion[0][0] = 0; //X' ^ Y'
+		mposicion[0][1] = 1; //X' ^ Y
+		mposicion[1][0] = 2; //X ^ Y'
+		mposicion[1][1] = 3; //X ^ Y
 	}
 
 	void calcularCantidad1() {

@@ -1,7 +1,6 @@
 #pragma once
 #include "Dato.h"
 
-
 class Agrupamiento
 {
 private:
