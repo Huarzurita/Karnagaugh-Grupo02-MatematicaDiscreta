@@ -68,6 +68,8 @@ namespace Grupo02Karnagaugh {
 	private: System::Windows::Forms::Label^ label20;
 	private: System::Windows::Forms::Label^ label19;
 	private: System::Windows::Forms::GroupBox^ groupBox2;
+	private: System::Windows::Forms::Label^ label23;
+	private: System::Windows::Forms::Label^ label24;
 
 		   Agrupamiento* agrupamiento;
 		   ~Operacion4()
@@ -352,6 +354,8 @@ namespace Grupo02Karnagaugh {
 			this->label20 = (gcnew System::Windows::Forms::Label());
 			this->label19 = (gcnew System::Windows::Forms::Label());
 			this->groupBox2 = (gcnew System::Windows::Forms::GroupBox());
+			this->label23 = (gcnew System::Windows::Forms::Label());
+			this->label24 = (gcnew System::Windows::Forms::Label());
 			this->groupBox1->SuspendLayout();
 			this->groupBox2->SuspendLayout();
 			this->SuspendLayout();
@@ -1621,11 +1625,34 @@ namespace Grupo02Karnagaugh {
 			this->groupBox2->TabStop = false;
 			this->groupBox2->Text = L"Mapa de Karnaugh ";
 			// 
+			// label23
+			// 
+			this->label23->AutoSize = true;
+			this->label23->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 8.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->label23->Location = System::Drawing::Point(311, 300);
+			this->label23->Name = L"label23";
+			this->label23->Size = System::Drawing::Size(116, 13);
+			this->label23->TabIndex = 5;
+			this->label23->Text = L"Funcion booleana: \r\n";
+			// 
+			// label24
+			// 
+			this->label24->AutoSize = true;
+			this->label24->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 16, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->label24->Location = System::Drawing::Point(328, 345);
+			this->label24->Name = L"label24";
+			this->label24->Size = System::Drawing::Size(0, 26);
+			this->label24->TabIndex = 6;
+			// 
 			// Operacion4
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->ClientSize = System::Drawing::Size(716, 769);
+			this->Controls->Add(this->label24);
+			this->Controls->Add(this->label23);
 			this->Controls->Add(this->button2);
 			this->Controls->Add(this->groupBox2);
 			this->Controls->Add(this->groupBox1);
@@ -1636,6 +1663,7 @@ namespace Grupo02Karnagaugh {
 			this->groupBox2->ResumeLayout(false);
 			this->groupBox2->PerformLayout();
 			this->ResumeLayout(false);
+			this->PerformLayout();
 
 		}
 #pragma endregion
@@ -1663,6 +1691,13 @@ namespace Grupo02Karnagaugh {
 		agrupamiento->buscar3(g);
 		agrupamiento->buscar2(g);
 		agrupamiento->buscarEx(g);
+		agrupamiento->buscarNo();
+		
+		
+		String^ aux = gcnew String(agrupamiento->getFuncion().c_str());
+		this->label24->Text = aux;
+		
+
 
 	}
 	private: System::Void button2_Click(System::Object^ sender, System::EventArgs^ e) {
