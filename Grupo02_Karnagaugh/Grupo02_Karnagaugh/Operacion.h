@@ -79,10 +79,10 @@ namespace Grupo02Karnagaugh {
 	private: System::Windows::Forms::Label^ lblgrupo;
 	private: System::Windows::Forms::Label^ lblfuncion;
 	private: System::Windows::Forms::Label^ lblfsimplificada;
-	private: System::Windows::Forms::Label^ lblf3;
-	private: System::Windows::Forms::Label^ lblf2;
-	private: System::Windows::Forms::Label^ lblf1;
-	private: System::Windows::Forms::Label^ lblf0;
+
+
+
+
 
 	private:
 		/// <summary>
@@ -97,10 +97,6 @@ namespace Grupo02Karnagaugh {
 		/// </summary>
 		void InitializeComponent(void)
 		{
-			this->lblf3 = (gcnew System::Windows::Forms::Label());
-			this->lblf2 = (gcnew System::Windows::Forms::Label());
-			this->lblf1 = (gcnew System::Windows::Forms::Label());
-			this->lblf0 = (gcnew System::Windows::Forms::Label());
 			this->label2 = (gcnew System::Windows::Forms::Label());
 			this->label3 = (gcnew System::Windows::Forms::Label());
 			this->label4 = (gcnew System::Windows::Forms::Label());
@@ -137,54 +133,6 @@ namespace Grupo02Karnagaugh {
 			this->groupBox2->SuspendLayout();
 			this->panel1->SuspendLayout();
 			this->SuspendLayout();
-			// 
-			// lblf3
-			// 
-			this->lblf3->AutoSize = true;
-			this->lblf3->BackColor = System::Drawing::Color::LightGreen;
-			this->lblf3->ForeColor = System::Drawing::Color::Red;
-			this->lblf3->Location = System::Drawing::Point(307, 117);
-			this->lblf3->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
-			this->lblf3->Name = L"lblf3";
-			this->lblf3->Size = System::Drawing::Size(23, 22);
-			this->lblf3->TabIndex = 12;
-			this->lblf3->Text = L"3";
-			// 
-			// lblf2
-			// 
-			this->lblf2->AutoSize = true;
-			this->lblf2->BackColor = System::Drawing::Color::LightGreen;
-			this->lblf2->ForeColor = System::Drawing::Color::Red;
-			this->lblf2->Location = System::Drawing::Point(187, 116);
-			this->lblf2->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
-			this->lblf2->Name = L"lblf2";
-			this->lblf2->Size = System::Drawing::Size(23, 22);
-			this->lblf2->TabIndex = 11;
-			this->lblf2->Text = L"2";
-			// 
-			// lblf1
-			// 
-			this->lblf1->AutoSize = true;
-			this->lblf1->BackColor = System::Drawing::Color::LightGreen;
-			this->lblf1->ForeColor = System::Drawing::Color::Red;
-			this->lblf1->Location = System::Drawing::Point(308, 77);
-			this->lblf1->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
-			this->lblf1->Name = L"lblf1";
-			this->lblf1->Size = System::Drawing::Size(22, 22);
-			this->lblf1->TabIndex = 10;
-			this->lblf1->Text = L"1";
-			// 
-			// lblf0
-			// 
-			this->lblf0->AutoSize = true;
-			this->lblf0->BackColor = System::Drawing::Color::LightGreen;
-			this->lblf0->ForeColor = System::Drawing::Color::Red;
-			this->lblf0->Location = System::Drawing::Point(187, 76);
-			this->lblf0->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
-			this->lblf0->Name = L"lblf0";
-			this->lblf0->Size = System::Drawing::Size(23, 22);
-			this->lblf0->TabIndex = 9;
-			this->lblf0->Text = L"0";
 			// 
 			// label2
 			// 
@@ -379,10 +327,6 @@ namespace Grupo02Karnagaugh {
 			// groupBox2
 			// 
 			this->groupBox2->BackColor = System::Drawing::Color::LightGreen;
-			this->groupBox2->Controls->Add(this->lblf3);
-			this->groupBox2->Controls->Add(this->lblf2);
-			this->groupBox2->Controls->Add(this->lblf1);
-			this->groupBox2->Controls->Add(this->lblf0);
 			this->groupBox2->Controls->Add(this->panel1);
 			this->groupBox2->Controls->Add(this->button1);
 			this->groupBox2->Controls->Add(this->label7);
@@ -541,9 +485,8 @@ namespace Grupo02Karnagaugh {
 			this->lblgrupo->Location = System::Drawing::Point(193, 416);
 			this->lblgrupo->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->lblgrupo->Name = L"lblgrupo";
-			this->lblgrupo->Size = System::Drawing::Size(89, 28);
+			this->lblgrupo->Size = System::Drawing::Size(0, 28);
 			this->lblgrupo->TabIndex = 18;
-			this->lblgrupo->Text = L"Grupo";
 			this->lblgrupo->Visible = false;
 			// 
 			// lblfuncion
@@ -637,7 +580,6 @@ namespace Grupo02Karnagaugh {
 			m->setmatriz(matriz);
 			m->generarMatrizPF();
 			agrupar();
-			this->lblgrupo->Visible = true;
 			this->lblfsimplificada->Visible = true;
 			this->lblfuncion->Visible = true;
 		}
@@ -647,8 +589,6 @@ namespace Grupo02Karnagaugh {
 		bool band = false;
 		switch (m->getcantidad1()) {
 		case 4:
-			this->lblgrupo->Text = "Grupo de 4: ";
-			this->lblgrupo->Text += m->getmposicion()[0][0] + ", " + m->getmposicion()[0][1] + ", " + m->getmposicion()[1][0] + ", " + m->getmposicion()[1][1];
 			this->lblfuncion->Text = "1";
 			break;
 		case 3:
@@ -656,14 +596,12 @@ namespace Grupo02Karnagaugh {
 				for (int j = 0; j < 2; j++) {
 					//horizontal
 					if ((j < 1) && (m->getmatriz()[i][j] == 1) && (m->getmatriz()[i][j+1] == 1)) {
-						this->lblgrupo->Text += "\nGrupo de 2: " + m->getmposicion()[i][j] + ", " + m->getmposicion()[i][j+1];
 						if (i == 0)this->lblfuncion->Text += "X'";
 						if (i == 1)this->lblfuncion->Text += "X";
 						if (!band) { this->lblfuncion->Text += " v "; band = true; }
 					}
 					//vertical
 					if ((i < 1) && (m->getmatriz()[i][j] == 1) && (m->getmatriz()[i+1][j] == 1)) {
-						this->lblgrupo->Text += "\nGrupo de 2: " + m->getmposicion()[i][j] + ", " + m->getmposicion()[i+1][j];
 						if (j == 0)this->lblfuncion->Text += "Y'";
 						if (j == 1)this->lblfuncion->Text += "Y";
 						if (!band) { this->lblfuncion->Text += " v "; band = true; }
@@ -676,23 +614,19 @@ namespace Grupo02Karnagaugh {
 				for (int j = 0; j < 2; j++) {
 					//horizontal
 					if ((j < 1) && (m->getmatriz()[i][j] == 1) && (m->getmatriz()[i][j + 1] == 1)) {
-						this->lblgrupo->Text += "\nGrupo de 2: " + m->getmposicion()[i][j] + ", " + m->getmposicion()[i][j + 1];
 						if (i == 0)this->lblfuncion->Text += "X'";
 						if (i == 1)this->lblfuncion->Text += "X";
 					}
 					//vertical
 					if ((i < 1) && (m->getmatriz()[i][j] == 1) && (m->getmatriz()[i + 1][j] == 1)) {
-						this->lblgrupo->Text += "\nGrupo de 2: " + m->getmposicion()[i][j] + ", " + m->getmposicion()[i + 1][j];
 						if (j == 0)this->lblfuncion->Text += "Y'";
 						if (j == 1)this->lblfuncion->Text += "Y";
 					}
 					//diagonales
 					if ((i < 1) && (j > 0) && (m->getmatriz()[i + 1][j] == 1) && (m->getmatriz()[i][j - 1] == 1)) {
-						this->lblgrupo->Text += "\nGrupo de 2: " + m->getmposicion()[i + 1][j] + ", " + m->getmposicion()[i][j - 1];
 						this->lblfuncion->Text = "(X' ^ Y') v (X ^ Y)";
 					}
 					if ((i < 1) && (j < 1) && (m->getmatriz()[i + 1][j] == 1) && (m->getmatriz()[i][j + 1] == 1)) {
-						this->lblgrupo->Text += "\nGrupo de 2: " + m->getmposicion()[i + 1][j] + ", " + m->getmposicion()[i][j + 1];
 						this->lblfuncion->Text = "(X' ^ Y) v (X ^ Y')";
 					}
 				}
@@ -702,7 +636,6 @@ namespace Grupo02Karnagaugh {
 			for (int i = 0; i < 2; i++) {
 				for (int j = 0; j < 2; j++) {
 					if (m->getmatriz()[i][j]==1) {
-						this->lblgrupo->Text += "\nGrupo de 1: " + m->getmposicion()[i][j];
 						if(m->getmposicion()[i][j]==0)this->lblfuncion->Text += "X' ^ Y'";
 						if(m->getmposicion()[i][j]==1)this->lblfuncion->Text += "X' ^ Y";
 						if(m->getmposicion()[i][j]==2)this->lblfuncion->Text += "X ^ Y'";
@@ -712,7 +645,6 @@ namespace Grupo02Karnagaugh {
 			}
 			break;
 		case 0:
-			this->lblgrupo->Text = "No hay grupos";
 			this->lblfuncion->Text = "0";
 			break;
 		}

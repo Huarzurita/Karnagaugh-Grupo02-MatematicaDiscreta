@@ -34,7 +34,7 @@ public:
 	void setcantidad1(int cantidad1) { this->cantidad1 = cantidad1; }
 
 	void generarMatrizPF() {
-		//Matriz que guarda posiciones y sirve para identificar la funcion
+		//Matriz que para identificar la funcion
 		mposicion[0][0] = 0; //X' ^ Y'
 		mposicion[0][1] = 1; //X' ^ Y
 		mposicion[1][0] = 2; //X ^ Y'
