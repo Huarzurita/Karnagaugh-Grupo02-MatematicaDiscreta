@@ -403,13 +403,14 @@ public:
 				}
 
 	}
-	void buscarNo() {
-
+	void buscarNo(Graphics^ g) {
+		Pen^ p = gcnew Pen(Color::Chocolate, 4);
 		for (int i = 0; i < f5.size(); i++)
 			for (int j = 0; j < f1.size(); j++)
-				if (f5[i][j]->getValor() == 1)
+				if (f5[i][j]->getValor() == 1) {
 					funcion = funcion + "( " + f5[i][j]->getx() + " ^ " + f5[i][j]->gety() + " ^ " + f5[i][j]->getz() + " ^ " + f5[i][j]->getw() + ") V ";
-
+					g->DrawRectangle(p, f5[i][j]->getX() - 10, f5[i][j]->getY() - 10, (59 * 1) + 10, (36 * 1) + 5);
+				}
 	}
 
 	string getFuncion() {

@@ -1711,7 +1711,7 @@ namespace Grupo02Karnagaugh {
 		//agrupamiento->buscar3(g);
 		agrupamiento->buscar2(g);
 		agrupamiento->buscarEx(g);
-		agrupamiento->buscarNo();
+		agrupamiento->buscarNo(g);
 
 
 		String^ aux = gcnew String(agrupamiento->getFuncion().c_str());
