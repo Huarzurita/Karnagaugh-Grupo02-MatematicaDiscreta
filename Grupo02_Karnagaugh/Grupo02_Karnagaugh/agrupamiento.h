@@ -23,59 +23,157 @@ public:
 		f4 = { new Dato(f41,f41x,f41y,"X","Y'","Z'","W'"),new Dato(f42,f42x,f42y,"X","Y'","Z'","W"),new Dato(f43,f43x,f43y,"X","Y'","Z","W"),new Dato(f44,f44x,f44y,"X","Y'","Z","W'") };
 		f5 = { f1,f2,f3,f4 };
 		funcion = "";
+		
 
 	};
 	~Agrupamiento() {};
 
+	void buscar8y16(Graphics^ g) {
+		Pen^ p = gcnew Pen(Color::DarkBlue, 4);
+		//Cuadrado 4x4 = 16
+		bool completo = false;
+		for (int i = 0; i < f5.size(); i++)
+			for (int j = 0; j < f1.size(); j++)
+				if(f5[i][j]->getValor() != 1)
+					completo = false;
+		if(completo == true){
+			for (int i = 0; i < f5.size(); i++)
+				for (int j = 0; j < f1.size(); j++)
+					f5[i][j]->setValor(2);
+
+			Pen^ a = gcnew Pen(Color::Yellow, 5);
+			g->DrawRectangle(a, f5[0][0]->getX() - 10, f5[0][0]->getY() - 10, (59 * 4) + 10, (36 * 4) + 10);
+			
+			funcion = funcion + "(X' ^ X ^ Y' ^ Y ^ Z' ^ Z ^ W' ^ W) V ";
+		}
+			
+
+
+		//Rectangulo 8
+			//Horizontal 2x4
+			for (int i = 0; i < 3; i++) //bajara hasta 3 filas (porque va)
+				for (int j = 0; j < 1; j++)
+					if (f5[i][j]->getValor() != 0 && f5[i + 1][j]->getValor() != 0 /**/ && f5[i][j + 1]->getValor() != 0 && f5[i + 1][j + 1]->getValor() != 0 /**/ && f5[i][j + 2]->getValor() != 0 && f5[i + 1][j + 2]->getValor() != 0 /**/ && f5[i][j + 3]->getValor() != 0 && f5[i + 1][j + 3]->getValor() != 0)
+						if (f5[i][j]->getValor() == 1 || f5[i + 1][j]->getValor() == 1 /**/ || f5[i][j + 1]->getValor() == 1 && f5[i + 1][j + 1]->getValor() == 1 /**/ || f5[i][j + 2]->getValor() == 1 || f5[i + 1][j + 2]->getValor() == 1 /**/ || f5[i][j + 3]->getValor() == 1 || f5[i + 1][j + 3]->getValor() == 1) {
+							f5[i][j]->setValor(2); f5[i+1][j]->setValor(2);/**/ f5[i][j+1]->setValor(2); f5[i + 1][j + 1]->setValor(2);/**/ f5[i][j + 2]->setValor(2); f5[i + 1][j + 2]->setValor(2);/**/ f5[i][j + 3]->setValor(2); f5[i + 1][j + 3]->setValor(2);
+							
+							funcion += "( ";
+							if (f5[i][j]->getx() == f5[i][j + 1]->getx() && f5[i][j + 1]->getx() == f5[i + 1][j]->getx() && f5[i + 1][j]->getx() == f5[i + 1][j + 1]->getx() && f5[i + 1][j + 1]->getx() == f5[i][j + 2]->getx() && f5[i][j + 2]->getx() == f5[i + 1][j + 2]->getx() && f5[i + 1][j + 2]->getx() == f5[i][j + 3]->getx() && f5[i][j + 3]->getx() == f5[i + 1][j + 3]->getx())//comparando si tienen el mismo x (X o X')
+								funcion = funcion + f5[i][j]->getx() + " ^ ";
+							if (f5[i][j]->gety() == f5[i][j + 1]->gety() && f5[i][j + 1]->gety() == f5[i + 1][j]->gety() && f5[i + 1][j]->gety() == f5[i + 1][j + 1]->gety() && f5[i + 1][j + 1]->gety() == f5[i][j + 2]->gety() && f5[i][j + 2]->gety() == f5[i + 1][j + 2]->gety() && f5[i + 1][j + 2]->gety() == f5[i][j + 3]->gety() && f5[i][j + 3]->gety() == f5[i + 1][j + 3]->gety())//comparando si tienen el mismo y (Y o Y')
+								funcion = funcion + f5[i][j]->gety() + " ^ ";
+							if (f5[i][j]->getz() == f5[i][j + 1]->getz() && f5[i][j + 1]->getz() == f5[i + 1][j]->getz() && f5[i + 1][j]->getz() == f5[i + 1][j + 1]->getz() && f5[i + 1][j + 1]->getz() == f5[i][j + 2]->getz() && f5[i][j + 2]->getz() == f5[i + 1][j + 2]->getz() && f5[i + 1][j + 2]->getz() == f5[i][j + 3]->getz() && f5[i][j + 3]->getz() == f5[i + 1][j + 3]->getz())//comparando si tienen el mismo z (Z o Z')
+								funcion = funcion + f5[i][j]->getz() + " ^ ";
+							if (f5[i][j]->getw() == f5[i][j + 1]->getw() && f5[i][j + 1]->getw() == f5[i + 1][j]->getw() && f5[i + 1][j]->getw() == f5[i + 1][j + 1]->getw() && f5[i + 1][j + 1]->getw() == f5[i][j + 2]->getw() && f5[i][j + 2]->getw() == f5[i + 1][j + 2]->getw() && f5[i + 1][j + 2]->getw() == f5[i][j + 3]->getw() && f5[i][j + 3]->getw() == f5[i + 1][j + 3]->getw())//comparando si tienen el mismo w (W o W')
+								funcion = funcion + f5[i][j]->getw() + " ^ ";
+							funcion[funcion.length() - 2] = ' ';
+							funcion += ") V ";
+
+							g->DrawRectangle(p, f5[i][j]->getX() - 10, f5[i][j]->getY() - 10, (59 * 4) + 10, (36 * 2) + 5);
+						}
+			//Vertical 4x2
+			for (int i = 0; i < 1; i++) //bajara hasta 3 filas (porque va)
+				for (int j = 0; j < 3; j++)
+					if (f5[i][j]->getValor() != 0 && f5[i + 1][j]->getValor() != 0 /**/ && f5[i][j + 1]->getValor() != 0 && f5[i + 1][j + 1]->getValor() != 0 /**/ && f5[i + 2][j]->getValor() != 0 && f5[i + 2][j + 1]->getValor() != 0 /**/ && f5[i + 3][j]->getValor() != 0 && f5[i + 3][j + 1]->getValor() != 0)
+						if (f5[i][j]->getValor() == 1 || f5[i + 1][j]->getValor() == 1 /**/ || f5[i][j + 1]->getValor() == 1 && f5[i + 1][j + 1]->getValor() == 1 /**/ || f5[i + 2][j]->getValor() == 1 || f5[i + 2][j + 1]->getValor() == 1 /**/ || f5[i + 3][j]->getValor() == 1 || f5[i + 3][j + 1]->getValor() == 1) {
+							f5[i][j]->setValor(2); f5[i + 1][j]->setValor(2);/**/ f5[i][j + 1]->setValor(2); f5[i + 1][j + 1]->setValor(2);/**/ f5[i + 2][j]->setValor(2); f5[i + 2][j + 1]->setValor(2);/**/ f5[i + 3][j]->setValor(2); f5[i + 3][j + 1]->setValor(2);
+							
+							funcion += "( ";
+							if (f5[i][j]->getx() == f5[i + 1][j]->getx() && f5[i + 1][j]->getx() == f5[i][j + 1]->getx() && f5[i][j + 1]->getx() == f5[i + 1][j + 1]->getx() && f5[i + 1][j + 1]->getx() == f5[i + 2][j]->getx() && f5[i + 2][j]->getx() == f5[i + 2][j + 1]->getx() && f5[i + 2][j + 1]->getx() == f5[i + 3][j]->getx() && f5[i + 3][j]->getx() == f5[i + 3][j + 1]->getx())//comparando si tienen el mismo x (X o X')
+								funcion = funcion + f5[i][j]->getx() + " ^ ";
+							if (f5[i][j]->gety() == f5[i + 1][j]->gety() && f5[i + 1][j]->gety() == f5[i][j + 1]->gety() && f5[i][j + 1]->gety() == f5[i + 1][j + 1]->gety() && f5[i + 1][j + 1]->gety() == f5[i + 2][j]->gety() && f5[i + 2][j]->gety() == f5[i + 2][j + 1]->gety() && f5[i + 2][j + 1]->gety() == f5[i + 3][j]->gety() && f5[i + 3][j]->gety() == f5[i + 3][j + 1]->gety())//comparando si tienen el mismo y (Y o Y')
+								funcion = funcion + f5[i][j]->gety() + " ^ ";
+							if (f5[i][j]->getz() == f5[i + 1][j]->getz() && f5[i + 1][j]->getz() == f5[i][j + 1]->getz() && f5[i][j + 1]->getz() == f5[i + 1][j + 1]->getz() && f5[i + 1][j + 1]->getz() == f5[i + 2][j]->getz() && f5[i + 2][j]->getz() == f5[i + 2][j + 1]->getz() && f5[i + 2][j + 1]->getz() == f5[i + 3][j]->getz() && f5[i + 3][j]->getz() == f5[i + 3][j + 1]->getz())//comparando si tienen el mismo z (Z o Z')
+								funcion = funcion + f5[i][j]->getz() + " ^ ";
+							if (f5[i][j]->getw() == f5[i + 1][j]->getw() && f5[i + 1][j]->getw() == f5[i][j + 1]->getw() && f5[i][j + 1]->getw() == f5[i + 1][j + 1]->getw() && f5[i + 1][j + 1]->getw() == f5[i + 2][j]->getw() && f5[i + 2][j]->getw() == f5[i + 2][j + 1]->getw() && f5[i + 2][j + 1]->getw() == f5[i + 3][j]->getw() && f5[i + 3][j]->getw() == f5[i + 3][j + 1]->getw())//comparando si tienen el mismo w (W o W')
+								funcion = funcion + f5[i][j]->getw() + " ^ ";
+							funcion[funcion.length() - 2] = ' ';
+							funcion += ") V ";
+
+							g->DrawRectangle(p, f5[i][j]->getX() - 10, f5[i][j]->getY() - 10, (59 * 2) + 10, (36 * 4) + 5);
+						}
+
+	}
 	void buscar4(Graphics^ g) {
+		Pen^ p = gcnew Pen(Color::Blue, 3);
+
+		//Cuadrado 2x2
+		for (int i = 0; i < 3; i++) //cuantas vceces bajara
+			for (int j = 0; j < 3; j++)//cuantas veces se movere a la derecha
+				if (f5[i][j]->getValor() != 0 && f5[i + 1][j]->getValor() != 0 /**/ && f5[i][j + 1]->getValor() != 0 && f5[i + 1][j + 1]->getValor() != 0)
+					if (f5[i][j]->getValor() == 1 || f5[i + 1][j]->getValor() == 1 ||f5[i][j + 1]->getValor() == 1 || f5[i + 1][j + 1]->getValor() == 0) {
+						f5[i][j]->setValor(2); f5[i][j + 1]->setValor(2); f5[i + 1][j]->setValor(2); f5[i + 1][j + 1]->setValor(2);
+						
+						funcion += "( ";
+						if (f5[i][j]->getx() == f5[i][j + 1]->getx() && f5[i][j + 1]->getx() == f5[i + 1][j]->getx() && f5[i + 1][j]->getx() == f5[i + 1][j + 1]->getx())//comparando si tienen el mismo x (X o X')
+							funcion = funcion + f5[i][j]->getx() + " ^ ";
+						if (f5[i][j]->gety() == f5[i][j + 1]->gety() && f5[i][j + 1]->gety() == f5[i + 1][j]->gety() && f5[i + 1][j]->gety() == f5[i + 1][j + 1]->gety())//comparando si tienen el mismo y (Y o Y')
+							funcion = funcion + f5[i][j]->gety() + " ^ ";
+						if (f5[i][j]->getz() == f5[i][j + 1]->getz() && f5[i][j + 1]->getz() == f5[i + 1][j]->getz() && f5[i + 1][j]->getz() == f5[i + 1][j + 1]->getz())//comparando si tienen el mismo z (Z o Z')
+							funcion = funcion + f5[i][j]->getz() + " ^ ";
+						if (f5[i][j]->getw() == f5[i][j + 1]->getw() && f5[i][j + 1]->getw() == f5[i + 1][j]->getw() && f5[i + 1][j]->getw() == f5[i + 1][j + 1]->getw())//comparando si tienen el mismo w (W o W')
+							funcion = funcion + f5[i][j]->getw() + " ^ ";
+						funcion[funcion.length() - 2] = ' ';
+						funcion += ") V ";
+
+						g->DrawRectangle(p, f5[i][j]->getX() - 10, f5[i][j]->getY() - 10, (59 * 2) + 10, (36 * 2) + 5);
+					}
+		
+		
 		//horizontal
 		for (int i = 0; i < f5.size(); i++)
-			if (f5[i][0]->getValor() != 0 && f5[i][1]->getValor() != 0 && f5[i][2]->getValor() != 0 && f5[i][3]->getValor() != 0) {// si encuentra una fila de 4 cambia el valor de ese grupo a 2
-				f5[i][0]->setValor(2); f5[i][1]->setValor(2); f5[i][2]->setValor(2); f5[i][3]->setValor(2);
-				
-				funcion += "( ";
-				if (f5[i][0]->getx() == f5[i][1]->getx() && f5[i][1]->getx() == f5[i][2]->getx() && f5[i][2]->getx() == f5[i][3]->getx())//comparando si tienen el mismo x (X o X')
-					funcion = funcion + f5[i][0]->getx() + " ^ ";
-				if (f5[i][0]->gety() == f5[i][1]->gety() && f5[i][1]->gety() == f5[i][2]->gety() && f5[i][2]->gety() == f5[i][3]->gety())//comparando si tienen el mismo y (Y o Y')
-					funcion = funcion + f5[i][0]->gety() + " ^ ";
-				if (f5[i][0]->getz() == f5[i][1]->getz() && f5[i][1]->getz() == f5[i][2]->getz() && f5[i][2]->getz() == f5[i][3]->getz())//comparando si tienen el mismo z (Z o Z')
-					funcion = funcion + f5[i][0]->getz() + " ^ ";
-				if (f5[i][0]->getw() == f5[i][1]->getw() && f5[i][1]->getw() == f5[i][2]->getw() && f5[i][2]->getw() == f5[i][3]->getw())//comparando si tienen el mismo w (W o W')
-					funcion = funcion + f5[i][0]->getw() + " ^ ";
-				funcion[funcion.length() - 2] = ' ';
-				funcion += ") V ";
+			if (f5[i][0]->getValor() != 0 && f5[i][1]->getValor() != 0 && f5[i][2]->getValor() != 0 && f5[i][3]->getValor() != 0) 
+				if(f5[i][0]->getValor() == 1 || f5[i][1]->getValor() == 1 || f5[i][2]->getValor() == 1 || f5[i][3]->getValor() == 1) {// si encuentra una fila de 4 cambia el valor de ese grupo a 2
+					f5[i][0]->setValor(2); f5[i][1]->setValor(2); f5[i][2]->setValor(2); f5[i][3]->setValor(2);
+					
+					funcion += "( ";
+					if (f5[i][0]->getx() == f5[i][1]->getx() && f5[i][1]->getx() == f5[i][2]->getx() && f5[i][2]->getx() == f5[i][3]->getx())//comparando si tienen el mismo x (X o X')
+						funcion = funcion + f5[i][0]->getx() + " ^ ";
+					if (f5[i][0]->gety() == f5[i][1]->gety() && f5[i][1]->gety() == f5[i][2]->gety() && f5[i][2]->gety() == f5[i][3]->gety())//comparando si tienen el mismo y (Y o Y')
+						funcion = funcion + f5[i][0]->gety() + " ^ ";
+					if (f5[i][0]->getz() == f5[i][1]->getz() && f5[i][1]->getz() == f5[i][2]->getz() && f5[i][2]->getz() == f5[i][3]->getz())//comparando si tienen el mismo z (Z o Z')
+						funcion = funcion + f5[i][0]->getz() + " ^ ";
+					if (f5[i][0]->getw() == f5[i][1]->getw() && f5[i][1]->getw() == f5[i][2]->getw() && f5[i][2]->getw() == f5[i][3]->getw())//comparando si tienen el mismo w (W o W')
+						funcion = funcion + f5[i][0]->getw() + " ^ ";
+					funcion[funcion.length() - 2] = ' ';
+					funcion += ") V ";
 
-				g->DrawRectangle(Pens::Blue, f5[i][0]->getX() - 10, f5[i][0]->getY() - 10, (47 * 4) + 10, (26 * 1) + 5);
-			}
+					g->DrawRectangle(p, f5[i][0]->getX() - 10, f5[i][0]->getY() - 10, (59 * 4) + 10, (36 * 1) + 5);
+				}	
+			
 		//vertical
 		for (int i = 0; i < f5.size(); i++)
-			if (f5[0][i]->getValor() != 0 && f5[1][i]->getValor() != 0 && f5[2][i]->getValor() != 0 && f5[3][i]->getValor() != 0) {// recorreindo columna por columnna de la matriz
-				f5[0][i]->setValor(2); f5[1][i]->setValor(2); f5[2][i]->setValor(2); f5[3][i]->setValor(2);
+			if (f5[0][i]->getValor() != 0 && f5[1][i]->getValor() != 0 && f5[2][i]->getValor() != 0 && f5[3][i]->getValor() != 0) 
+				if(f5[0][i]->getValor() == 1 || f5[1][i]->getValor() == 1 || f5[2][i]->getValor() == 1 || f5[3][i]->getValor() == 1) {// recorreindo columna por columnna de la matriz
 
-				funcion += "( ";
-				if (f5[0][i]->getx() == f5[1][i]->getx() && f5[1][i]->getx() == f5[2][i]->getx() && f5[2][i]->getx() == f5[3][i]->getx())//comparando si tienen el mismo x (X o X')
-					funcion = funcion + f5[0][i]->getx() + " ^ ";
-				if (f5[0][i]->gety() == f5[1][i]->gety() && f5[1][i]->gety() == f5[2][i]->gety() && f5[2][i]->gety() == f5[3][i]->gety())//comparando si tienen el mismo y (Y o Y')
-					funcion = funcion + f5[0][i]->gety() + " ^ ";
-				if (f5[0][i]->getz() == f5[1][i]->getz() && f5[1][i]->getz() == f5[2][i]->getz() && f5[2][i]->getz() == f5[3][i]->getz())//comparando si tienen el mismo z (Z o Z')
-					funcion = funcion + f5[0][i]->getz() + " ^ ";
-				if (f5[0][i]->getw() == f5[1][i]->getw() && f5[1][i]->getw() == f5[2][i]->getw() && f5[2][i]->getw() == f5[3][i]->getw())//comparando si tienen el mismo w (W o W')
-					funcion = funcion + f5[0][i]->getw() + " ^ ";
-				funcion[funcion.length() - 2] = ' ';
-				funcion += ") V ";
+					f5[0][i]->setValor(2); f5[1][i]->setValor(2); f5[2][i]->setValor(2); f5[3][i]->setValor(2);
+					
+					funcion += "( ";
+					if (f5[0][i]->getx() == f5[1][i]->getx() && f5[1][i]->getx() == f5[2][i]->getx() && f5[2][i]->getx() == f5[3][i]->getx())//comparando si tienen el mismo x (X o X')
+						funcion = funcion + f5[0][i]->getx() + " ^ ";
+					if (f5[0][i]->gety() == f5[1][i]->gety() && f5[1][i]->gety() == f5[2][i]->gety() && f5[2][i]->gety() == f5[3][i]->gety())//comparando si tienen el mismo y (Y o Y')
+						funcion = funcion + f5[0][i]->gety() + " ^ ";
+					if (f5[0][i]->getz() == f5[1][i]->getz() && f5[1][i]->getz() == f5[2][i]->getz() && f5[2][i]->getz() == f5[3][i]->getz())//comparando si tienen el mismo z (Z o Z')
+						funcion = funcion + f5[0][i]->getz() + " ^ ";
+					if (f5[0][i]->getw() == f5[1][i]->getw() && f5[1][i]->getw() == f5[2][i]->getw() && f5[2][i]->getw() == f5[3][i]->getw())//comparando si tienen el mismo w (W o W')
+						funcion = funcion + f5[0][i]->getw() + " ^ ";
+					funcion[funcion.length() - 2] = ' ';
+					funcion += ") V ";
 
-				g->DrawRectangle(Pens::Blue, f5[0][i]->getX() - 10, f5[0][i]->getY() - 10, (47 * 1) + 10, (26 * 4) + 5);
-			}
+					g->DrawRectangle(p, f5[0][i]->getX() - 10, f5[0][i]->getY() - 10, (59 * 1) + 10, (36 * 4) + 5);
+				}		
 
 	}
 	void buscar3(Graphics^ g) {
+		Pen^ p = gcnew Pen(Color::Violet, 2);
+
 		//horizontal
 		for (int i = 0; i < f5.size(); i++)// para cara fila
 			for (int j = 0; j < 2; j++)//iterara 2 veces pues si no saldria delvector
 				if (f5[i][j]->getValor() != 0 && f5[i][j + 1]->getValor() != 0 && f5[i][j + 2]->getValor() != 0)//veriifcamos que hay un grupo de 3 diferente de 0
 					if (f5[i][j]->getValor() == 1 || f5[i][j + 1]->getValor() == 1 || f5[i][j + 2]->getValor() == 1) { //verificamos que almeons 1 del grupo sea igual a 1
 						f5[i][j]->setValor(2); f5[i][j + 1]->setValor(2); f5[i][j + 2]->setValor(2);
-
+						
 						funcion += "( ";
 						if (f5[i][j]->getx() == f5[i][j+1]->getx() && f5[i][j+1]->getx() == f5[i][j+2]->getx())//comparando si tienen el mismo x (X o X')
 							funcion = funcion + f5[i][j]->getx() + " ^ ";
@@ -88,7 +186,7 @@ public:
 						funcion[funcion.length() - 2] = ' ';
 						funcion += ") V ";
 
-						g->DrawRectangle(Pens::Violet, f5[i][j]->getX() - 10, f5[i][j]->getY() - 10, (47 * 3) + 10, (26 * 1) + 5);
+						g->DrawRectangle(p, f5[i][j]->getX() - 10, f5[i][j]->getY() - 10, (59 * 3) + 10, (36 * 1) + 5);
 					}
 
 
@@ -98,7 +196,7 @@ public:
 				if (f5[j][i]->getValor() != 0 && f5[j + 1][i]->getValor() != 0 && f5[j + 2][i]->getValor() != 0)//verificacion que hay un grupo de 3 vertical !=0
 					if (f5[j][i]->getValor() == 1 || f5[j + 1][i]->getValor() == 0 || f5[j + 2][i]->getValor() == 1) {//verificacmos que almenos 1 de los valores del grupo es igual a 1
 						f5[j][i]->setValor(2); f5[j + 1][i]->setValor(2); f5[j + 2][i]->setValor(2);
-
+						
 						funcion += "( ";
 						if (f5[j][i]->getx() == f5[j+1][i]->getx() && f5[j+1][i]->getx() == f5[j+2][i]->getx())//comparando si tienen el mismo x (X o X')
 							funcion = funcion + f5[j][i]->getx() + " ^ ";
@@ -111,18 +209,20 @@ public:
 						funcion[funcion.length() - 2] = ' ';
 						funcion += ") V ";
 
-						g->DrawRectangle(Pens::Violet, f5[j][i]->getX() - 10, f5[j][i]->getY() - 10, (47 * 1) + 10, (26 * 3) + 5);
+						g->DrawRectangle(p, f5[j][i]->getX() - 10, f5[j][i]->getY() - 10, (59 * 1) + 10, (36 * 3) + 5);
 					}
 
 	}
 	void buscar2(Graphics^ g) {
+		Pen^ p = gcnew Pen(Color::Green, 1);
+
 		//horizontal
 		for (int i = 0; i < f5.size(); i++)
 			for (int j = 0; j < 3; j++)
 				if (f5[i][j]->getValor() != 0 && f5[i][j + 1]->getValor() != 0) // verificamos que hay un grupo de 2 diferentes de 0
 					if (f5[i][j]->getValor() == 1 || f5[i][j + 1]->getValor() == 1) {
 						f5[i][j]->setValor(2); f5[i][j + 1]->setValor(2);
-
+					
 						funcion += "( ";
 						if (f5[i][j]->getx() == f5[i][j + 1]->getx())//comparando si tienen el mismo x (X o X')
 							funcion = funcion + f5[i][j]->getx() + " ^ ";
@@ -135,7 +235,7 @@ public:
 						funcion[funcion.length() - 2] = ' ';
 						funcion += ") V ";
 
-						g->DrawRectangle(Pens::Green, f5[i][j]->getX() - 10, f5[i][j]->getY() - 10, (47 * 2) + 10, (26 * 1) + 5);
+						g->DrawRectangle(p, f5[i][j]->getX() - 10, f5[i][j]->getY() - 10, (59 * 2) + 10, (36 * 1) + 5);
 					}
 
 
@@ -145,7 +245,7 @@ public:
 				if (f5[j][i]->getValor() != 0 && f5[j + 1][i]->getValor() != 0)
 					if (f5[j][i]->getValor() == 1 || f5[j + 1][i]->getValor() == 1) {
 						f5[j][i]->setValor(2); f5[j + 1][i]->setValor(2);
-
+						
 						funcion += "( ";
 						if (f5[j][i]->getx() == f5[j+1][i]->getx())//comparando si tienen el mismo x (X o X')
 							funcion = funcion + f5[j][i]->getx() + " ^ ";
@@ -158,17 +258,18 @@ public:
 						funcion[funcion.length() - 2] = ' ';
 						funcion += ") V ";
 
-						g->DrawRectangle(Pens::Green, f5[j][i]->getX() - 10, f5[j][i]->getY() - 10, (47 * 1) + 10, (26 * 2) + 5);
+						g->DrawRectangle(p, f5[j][i]->getX() - 10, f5[j][i]->getY() - 10, (59 * 1) + 10, (36 * 2) + 5);
 					}
 
 	}
 	void buscarEx(Graphics^ g) {
+		Pen^ p = gcnew Pen(Color::Red, 4);
 		//horizontal
 		for (int i = 0; i < f5.size(); i++)
 			if (f5[i][0]->getValor() != 0 && f5[i][3]->getValor() != 0)
 				if (f5[i][0]->getValor() == 1 || f5[i][3]->getValor() == 1) {
 					f5[i][0]->setValor(2); f5[i][3]->setValor(2);
-
+				
 					funcion += "( ";
 					if (f5[i][0]->getx() == f5[i][3]->getx())//comparando si tienen el mismo x (X o X')
 						funcion = funcion + f5[i][0]->getx() + " ^ ";
@@ -181,8 +282,8 @@ public:
 					funcion[funcion.length() - 2] = ' ';
 					funcion += " ) V ";
 
-					g->DrawRectangle(Pens::Red, f5[i][0]->getX() - 10, f5[i][0]->getY() - 10, (47 * 1) + 10, (26 * 1) + 5);
-					g->DrawRectangle(Pens::Red, f5[i][3]->getX() - 10, f5[i][3]->getY() - 10, (47 * 1) + 10, (26 * 1) + 5);
+					g->DrawRectangle(p, f5[i][0]->getX() - 10, f5[i][0]->getY() - 10, (59 * 1) + 10, (36 * 1) + 5);
+					g->DrawRectangle(p, f5[i][3]->getX() - 10, f5[i][3]->getY() - 10, (59 * 1) + 10, (36 * 1) + 5);
 				}
 
 
@@ -191,7 +292,7 @@ public:
 			if (f5[0][i]->getValor() != 0 && f5[3][i]->getValor() != 0)
 				if (f5[0][i]->getValor() == 1 || f5[3][i]->getValor() == 1) {
 					f5[0][i]->setValor(2); f5[3][i]->setValor(2);
-
+					
 					funcion += "( ";
 					if (f5[0][i]->getx() == f5[3][i]->getx())//comparando si tienen el mismo x (X o X')
 						funcion = funcion + f5[0][i]->getx() + " ^ ";
@@ -204,12 +305,13 @@ public:
 					funcion[funcion.length() - 2] = ' ';
 					funcion += " ) V ";
 
-					g->DrawRectangle(Pens::Red, f5[0][i]->getX() - 10, f5[0][i]->getY() - 10, (47 * 1) + 10, (26 * 1) + 5);
-					g->DrawRectangle(Pens::Red, f5[3][i]->getX() - 10, f5[3][i]->getY() - 10, (47 * 1) + 10, (26 * 1) + 5);
+					g->DrawRectangle(p, f5[0][i]->getX() - 10, f5[0][i]->getY() - 10, (59 * 1) + 10, (36 * 1) + 5);
+					g->DrawRectangle(p, f5[3][i]->getX() - 10, f5[3][i]->getY() - 10, (59 * 1) + 10, (36 * 1) + 5);
 				}
 
 	}
 	void buscarNo() {
+		
 		for (int i = 0; i < f5.size(); i++)
 			for (int j = 0; j < f1.size(); j++)
 				if (f5[i][j]->getValor() == 1)
