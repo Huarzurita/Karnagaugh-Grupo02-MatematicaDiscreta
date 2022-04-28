@@ -24,6 +24,14 @@ public:
 		this->z1 = z1;
 		this->w1 = w1;
 	};
+	Dato(int v, int x, int y, string x1, string y1, string z1) {
+		this->v = v;
+		this->x = x;//distancia del contenedor con respecto al contenedor rosa en ancho
+		this->y = y;//distancia del contenedor a esta  en alto
+		this->x1 = x1;
+		this->y1 = y1;
+		this->z1 = z1;
+	}
 	~Dato() {};
 
 	int getX() { return x; }

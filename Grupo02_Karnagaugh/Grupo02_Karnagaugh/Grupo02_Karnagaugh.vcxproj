@@ -129,7 +129,8 @@
     <ClCompile Include="Operacion4.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="agrupamiento.h" />
+    <ClInclude Include="agrupamiento03.h" />
+    <ClInclude Include="agrupamiento04.h" />
     <ClInclude Include="Dato.h" />
     <ClInclude Include="Dibujarmapa.h" />
     <ClInclude Include="FrmMain.h">

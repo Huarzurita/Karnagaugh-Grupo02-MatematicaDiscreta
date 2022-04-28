@@ -1,5 +1,5 @@
 #pragma once
-#include "agrupamiento.h"
+#include "agrupamiento04.h"
 
 namespace Grupo02Karnagaugh {
 
@@ -73,7 +73,7 @@ namespace Grupo02Karnagaugh {
 	private: System::Windows::Forms::Button^ button2;
 
 
-		   Agrupamiento* agrupamiento;
+		   Agrupamiento4* agrupamiento;
 		   ~Operacion4()
 		   {
 			   if (components)
@@ -1700,21 +1700,25 @@ namespace Grupo02Karnagaugh {
 		this->textBox95->Text = this->comboBox14->Text;
 		this->textBox91->Text = this->comboBox15->Text;
 		this->textBox92->Text = this->comboBox16->Text;
-		agrupamiento = new Agrupamiento(Convert::ToInt32(this->textBox36->Text), Convert::ToInt32(this->textBox36->Location.X), Convert::ToInt32(this->textBox36->Location.Y), Convert::ToInt32(this->textBox35->Text), Convert::ToInt32(this->textBox35->Location.X), Convert::ToInt32(this->textBox35->Location.Y), Convert::ToInt32(this->textBox40->Text), Convert::ToInt32(this->textBox40->Location.X), Convert::ToInt32(this->textBox40->Location.Y), Convert::ToInt32(this->textBox39->Text), Convert::ToInt32(this->textBox39->Location.X), Convert::ToInt32(this->textBox39->Location.Y), Convert::ToInt32(this->textBox34->Text), Convert::ToInt32(this->textBox34->Location.X), Convert::ToInt32(this->textBox34->Location.Y), Convert::ToInt32(this->textBox33->Text), Convert::ToInt32(this->textBox33->Location.X), Convert::ToInt32(this->textBox33->Location.Y), Convert::ToInt32(this->textBox38->Text), Convert::ToInt32(this->textBox38->Location.X), Convert::ToInt32(this->textBox38->Location.Y), Convert::ToInt32(this->textBox37->Text), Convert::ToInt32(this->textBox37->Location.X), Convert::ToInt32(this->textBox37->Location.Y), Convert::ToInt32(this->textBox96->Text), Convert::ToInt32(this->textBox96->Location.X), Convert::ToInt32(this->textBox96->Location.Y), Convert::ToInt32(this->textBox95->Text), Convert::ToInt32(this->textBox95->Location.X), Convert::ToInt32(this->textBox95->Location.Y), Convert::ToInt32(this->textBox92->Text), Convert::ToInt32(this->textBox92->Location.X), Convert::ToInt32(this->textBox92->Location.Y), Convert::ToInt32(this->textBox91->Text), Convert::ToInt32(this->textBox91->Location.X), Convert::ToInt32(this->textBox91->Location.Y), Convert::ToInt32(this->textBox94->Text), Convert::ToInt32(this->textBox94->Location.X), Convert::ToInt32(this->textBox94->Location.Y), Convert::ToInt32(this->textBox93->Text), Convert::ToInt32(this->textBox93->Location.X), Convert::ToInt32(this->textBox93->Location.Y), Convert::ToInt32(this->textBox90->Text), Convert::ToInt32(this->textBox90->Location.X), Convert::ToInt32(this->textBox90->Location.Y), Convert::ToInt32(this->textBox89->Text), Convert::ToInt32(this->textBox89->Location.X), Convert::ToInt32(this->textBox89->Location.Y));
+		agrupamiento = new Agrupamiento4(Convert::ToInt32(this->textBox36->Text), Convert::ToInt32(this->textBox36->Location.X), Convert::ToInt32(this->textBox36->Location.Y),/**/ Convert::ToInt32(this->textBox35->Text), Convert::ToInt32(this->textBox35->Location.X), Convert::ToInt32(this->textBox35->Location.Y),/**/ Convert::ToInt32(this->textBox40->Text), Convert::ToInt32(this->textBox40->Location.X), Convert::ToInt32(this->textBox40->Location.Y),/**/ Convert::ToInt32(this->textBox39->Text), Convert::ToInt32(this->textBox39->Location.X), Convert::ToInt32(this->textBox39->Location.Y),
+			Convert::ToInt32(this->textBox34->Text), Convert::ToInt32(this->textBox34->Location.X), Convert::ToInt32(this->textBox34->Location.Y),/**/ Convert::ToInt32(this->textBox33->Text), Convert::ToInt32(this->textBox33->Location.X), Convert::ToInt32(this->textBox33->Location.Y),/**/ Convert::ToInt32(this->textBox38->Text), Convert::ToInt32(this->textBox38->Location.X), Convert::ToInt32(this->textBox38->Location.Y),/**/ Convert::ToInt32(this->textBox37->Text), Convert::ToInt32(this->textBox37->Location.X), Convert::ToInt32(this->textBox37->Location.Y),
+			Convert::ToInt32(this->textBox96->Text), Convert::ToInt32(this->textBox96->Location.X), Convert::ToInt32(this->textBox96->Location.Y),/**/ Convert::ToInt32(this->textBox95->Text), Convert::ToInt32(this->textBox95->Location.X), Convert::ToInt32(this->textBox95->Location.Y),/**/ Convert::ToInt32(this->textBox92->Text), Convert::ToInt32(this->textBox92->Location.X), Convert::ToInt32(this->textBox92->Location.Y),/**/ Convert::ToInt32(this->textBox91->Text), Convert::ToInt32(this->textBox91->Location.X), Convert::ToInt32(this->textBox91->Location.Y),
+			Convert::ToInt32(this->textBox94->Text), Convert::ToInt32(this->textBox94->Location.X), Convert::ToInt32(this->textBox94->Location.Y),/**/ Convert::ToInt32(this->textBox93->Text), Convert::ToInt32(this->textBox93->Location.X), Convert::ToInt32(this->textBox93->Location.Y),/**/ Convert::ToInt32(this->textBox90->Text), Convert::ToInt32(this->textBox90->Location.X), Convert::ToInt32(this->textBox90->Location.Y),/**/ Convert::ToInt32(this->textBox89->Text), Convert::ToInt32(this->textBox89->Location.X), Convert::ToInt32(this->textBox89->Location.Y));
+
 
 		agrupamiento->buscar8y16(g);
 		agrupamiento->buscar4(g);
-		agrupamiento->buscar3(g);
+		//agrupamiento->buscar3(g);
 		agrupamiento->buscar2(g);
 		agrupamiento->buscarEx(g);
 		agrupamiento->buscarNo();
-		
-		
+
+
 		String^ aux = gcnew String(agrupamiento->getFuncion().c_str());
 		this->label24->Text = aux;
 	}
-private: System::Void button2_Click_1(System::Object^ sender, System::EventArgs^ e) {
-	this->Close();
-}
-};
+	private: System::Void button2_Click_1(System::Object^ sender, System::EventArgs^ e) {
+		this->Close();
+	}
+	};
 }

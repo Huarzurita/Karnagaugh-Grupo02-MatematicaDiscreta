@@ -50,7 +50,10 @@
     <ClInclude Include="Dato.h">
       <Filter>Archivos de encabezado</Filter>
     </ClInclude>
-    <ClInclude Include="agrupamiento.h">
+    <ClInclude Include="agrupamiento04.h">
+      <Filter>Archivos de encabezado</Filter>
+    </ClInclude>
+    <ClInclude Include="agrupamiento03.h">
       <Filter>Archivos de encabezado</Filter>
     </ClInclude>
   </ItemGroup>
