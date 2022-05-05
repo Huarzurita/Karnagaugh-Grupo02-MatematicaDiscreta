@@ -5,7 +5,6 @@ class MapaDeKarnaugh {
 private:
 	int** matriz;
 	int** mposicion;
-	int** mfuncion;
 	int cantidad1;
 public:
 	MapaDeKarnaugh() {
@@ -19,10 +18,6 @@ public:
 			mposicion[i] = new int[2];
 		};
 
-		mposicion = new int* [4];
-		for (int i = 0; i < 2; i++) {
-			mposicion[i] = new int[4];
-		};
 		cantidad1 = 0;
 	}
 	~MapaDeKarnaugh() {}

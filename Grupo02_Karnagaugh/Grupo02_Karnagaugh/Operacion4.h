@@ -1708,7 +1708,6 @@ namespace Grupo02Karnagaugh {
 
 		agrupamiento->buscar8y16(g);
 		agrupamiento->buscar4(g);
-		//agrupamiento->buscar3(g);
 		agrupamiento->buscar2(g);
 		agrupamiento->buscarEx(g);
 		agrupamiento->buscarNo(g);
